@@ -250,3 +250,5 @@ function setUrl(link) {
     $('#dropdown-searchbar').text(`${pagesData.pageData.url}/${link}`);
 };
 // ============================================== //
+
+let loadedScripts = [];
