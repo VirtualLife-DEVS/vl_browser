@@ -1,0 +1,107 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    
+    background-image: url(/html/websites/vbrowser/images/browserbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-color: #191919;
+    color: #fff;
+    overflow-y: auto;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.main-container {
+    margin: 20px 100px;
+}
+
+.pages-cards {
+    display: flex;
+    gap: 20px;
+}
+.pages-cards .left-container {
+    width: 90%;
+}
+.pages-cards .right-container {
+    width: auto;
+}
+
+.pages-cards .page-card-box {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+}
+.pages-cards .page-card-box .cards-title {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+.pages-cards .page-card-box .page-cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+.pages-cards .page-card-box .page-cards .card-button {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: none;
+    width: 175px;
+    height: 80px;
+    transition: all 0.3s ease-in-out;
+}
+.pages-cards .page-card-box .page-cards .card-button:hover {
+    transform: translateY(-8px);
+}
+.pages-cards .page-card-box .page-cards .page-card {
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 15px 0px 15px 0px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+}
+.page-card.lscity {
+    background-color: #0f2940 !important;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+.page-card.lspd {
+    background-color: #242497 !important;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+.page-card.sams {
+    background-color: #c41212 !important;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+.page-card.businesscenter {
+    background-color: #6781b3 !important;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+
+.pages-cards .page-card-box .page-cards .page-card .page-name {
+    width: 100%;
+    font-size: 12px;
+    font-weight: 600;
+}
+.pages-cards .page-card-box .page-cards .page-card .page-adress {
+    font-size: 10px;
+    font-weight: 500;
+    opacity: .6;
+}

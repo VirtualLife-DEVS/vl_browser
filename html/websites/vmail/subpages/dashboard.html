@@ -1,0 +1,81 @@
+<script>
+    setUrl('dashboard');
+</script>
+
+<div class="sidebar">
+    <div class="header">
+        <img data-image="vMail.png">
+    </div>
+    <div class="create-email">
+        <button class="create-email-btn" type="button" data-bs-toggle="modal" data-bs-target="#create-emailModal">
+            <span class="iconify icon" data-icon="material-symbols:edit"></span> <span class="ms-auto">Utwórz</span>
+        </button>
+    </div>
+    <div class="menu">
+        <button class="menu-btn active" data-browser-subpage="received" data-browser-subpage-target="#main-container" type="button">
+            <span class="iconify icon" data-icon="material-symbols:inbox"></span>
+            <span class="title">Odebrane</span>
+        </button>
+        <button class="menu-btn" data-browser-subpage="sent" data-browser-subpage-target="#main-container" type="button">
+            <span class="iconify icon" data-icon="material-symbols:send-rounded"></span>
+            <span class="title">Wysłane</span>
+        </button>
+        <button class="menu-btn" data-browser-subpage="drafts" data-browser-subpage-target="#main-container" type="button">
+            <span class="iconify icon" data-icon="ion:document-sharp"></span>
+            <span class="title">Wersje robocze</span>
+        </button>
+        <button class="menu-btn" data-browser-subpage="important" data-browser-subpage-target="#main-container" type="button">
+            <span class="iconify icon" data-icon="ic:baseline-label-important"></span>
+            <span class="title">Ważne</span>
+        </button>
+        <button class="menu-btn" data-browser-subpage="deleted" data-browser-subpage-target="#main-container" type="button">
+            <span class="iconify icon" data-icon="material-symbols:delete-rounded"></span>
+            <span class="title">Usunięte</span>
+        </button>
+    </div>
+</div>
+
+<div class="main">
+    <div class="search-bar">
+        <div class="search">
+            <span class="iconify icon" data-icon="material-symbols:search"></span>
+            <input class="form-control" type="search" placeholder="Przeszukaj pocztę" aria-label="Search">
+        </div>
+        <div class="main-email-info">
+            <span class="title">Mój adres e-mail</span>
+            <span class="value">imienazwisko@vmail.com</span>
+        </div>
+    </div>
+    <div id="main-container">
+        <script>
+            $('#main-container').loadSubPage('received.html');
+        </script>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="create-emailModal" tabindex="-1" aria-labelledby="create-emailModalLabel" data-bs-backdrop="static" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="create-emailModalLabel">Nowa wiadomość</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="ce-to-inp" placeholder="Do">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="ce-title-inp" placeholder="Tytuł">
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" id="ce-contents-inp" rows="20" placeholder="Treść"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success">Wyślij</button>
+            </div>
+        </div>
+    </div>
+</div>

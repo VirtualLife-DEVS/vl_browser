@@ -1,0 +1,252 @@
+<script>
+    setUrl('dashboard');
+</script>
+
+<div class="sidebar">
+    <div class="header">
+        <img data-image="vbSygnet.png" width="65%">
+        <div class="d-flex flex-column lh-1">
+            <span>Witaj w bankowości</span>
+            <span>Co możemy dla Ciebie zrobić?</span>
+        </div>
+    </div>
+    <div class="menu">
+        <button data-browser-subpage="dashboard" data-browser-subpage-target=".body" class="main-btn active" type="button">Strona Główna</button>
+        <button data-browser-subpage="settings" data-browser-subpage-target=".main" class="main-btn" type="button">Ustawienia</button>
+        <button data-browser-page="virtualbanking" class="main-btn" type="button">Wyloguj się</button>
+    </div>
+
+</div>
+
+<div class="main">
+    <div class="main-container">
+        <span class="page-title">Dashboard</span>
+    </div>
+    <div class="main-container">
+        <div class="d-flex align-items-streetch gap-4">
+            <div class="page-element">
+                <div class="account-informations">
+                    <div class="account-type">
+                        <img data-image="walet.png" width="20%">
+                        <div class="d-flex flex-column">
+                            <span class="title">KONTO OSOBISTE</span>
+                            <span class="value">12 123 123 123</span>
+                        </div>
+                    </div>
+                    <div class="account-owner">
+                        <span class="owner-username">Imię Nazwisko</span>
+                    </div>
+                </div>
+                <div class="account-money-info">
+                    <div class="d-flex flex-column">
+                        <span class="title">DOSTĘPPNE ŚRODKI</span>
+                        <span class="value">$125.000.000</span>
+                    </div>
+                    <button class="main-btn" data-bs-toggle="modal" data-bs-target="#money-transferModal" type="button">Przelej środki</button>
+                </div>
+            </div>
+            <div class="page-element">
+                <div class="debitcard-informations">
+                    <div class="debitcard">
+                        <img data-image="debit.png" width="20%">
+                        <div class="d-flex flex-column">
+                            <span class="title">KARTA DEBETOWA</span>
+                            <span class="value">12 123 123 123</span>
+                        </div>
+                    </div>
+                    <button class="main-btn ms-auto" data-bs-toggle="modal" data-bs-target="#card-managementModal" type="button">Zarządzaj kartą</button>
+                </div>
+                <div class="debitcard-status">
+                    <div class="d-flex flex-column">
+                        <span class="title">STATUS KARTY DEBETOWEJ</span>
+                        <span class="value">Karta debetowa nie została zarejestrowana. <a data-bs-toggle="modal" data-bs-target="#no-card-infoModal">[Kliknij]</a> po więcej informacji.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="page-element p-3">
+            <span class="title">HISTORIA TRANSAKCJI</span>
+            <table id="transaction-history" class="table table-dark table-hover table-borderless align-middle">
+                <thead>
+                    <tr>
+                        <th scope="col" class="text-center">STATUS</th>
+                        <th scope="col" class="text-center">NADAWCA</th>
+                        <th scope="col" class="text-center">ODBIORCA</th>
+                        <th scope="col" class="text-center">RODZAJ</th>
+                        <th scope="col" class="text-center">KWOTA</th>
+                        <th scope="col" class="text-center">DATA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center">
+                            <span class="iconify arrow arrow-received" data-icon="ic:round-arrow-forward"></span>
+                        </td>
+                        <td class="text-center">
+                            <div class="d-flex flex-column">
+                                <span class="title">Imię Nazwisko</span>
+                                <span class="value">12 123 123 123</span>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="d-flex flex-column">
+                                <span class="title">Imię Nazwisko</span>
+                                <span class="value">12 123 123 123</span>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <span class="title">Przelew środków</span>
+                        </td>
+                        <td class="text-center">
+                            <span class="title">$10.000</span>
+                        </td>
+                        <td class="text-center">
+                            <span class="title">26.04.2023, 23:42</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <span class="iconify arrow arrow-sent" data-icon="ic:round-arrow-back"></span>
+                        </td>
+                        <td class="text-center">
+                            <div class="d-flex flex-column">
+                                <span class="title">Imię Nazwisko</span>
+                                <span class="value">12 123 123 123</span>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="d-flex flex-column">
+                                <span class="title">Imię Nazwisko</span>
+                                <span class="value">12 123 123 123</span>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <span class="title">Przelew środków</span>
+                        </td>
+                        <td class="text-center">
+                            <span class="title">$10.000</span>
+                        </td>
+                        <td class="text-center">
+                            <span class="title">26.04.2023, 23:42</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <span class="iconify arrow arrow-sent" data-icon="ic:round-arrow-back"></span>
+                        </td>
+                        <td class="text-center">
+                            <div class="d-flex flex-column">
+                                <span class="title">Imię Nazwisko</span>
+                            </div>
+                        </td>
+                        <td></td>
+                        <td class="text-center">
+                            <span class="title">Wypłata środków</span>
+                        </td>
+                        <td class="text-center">
+                            <span class="title">$5.000</span>
+                        </td>
+                        <td class="text-center">
+                            <span class="title">26.04.2023, 23:42</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <span class="iconify arrow arrow-sent" data-icon="ic:round-arrow-back"></span>
+                        </td>
+                        <td class="text-center">
+                            <div class="d-flex flex-column">
+                                <span class="title">Imię Nazwisko</span>
+                                <span class="value">12 123 123 123</span>
+                            </div>
+                        </td>
+                        <td></td>
+                        <td class="text-center">
+                            <span class="title">Płatność kartą</span>
+                        </td>
+                        <td class="text-center">
+                            <span class="title">$1.000</span>
+                        </td>
+                        <td class="text-center">
+                            <span class="title">26.04.2023, 23:42</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="modal fade" id="money-transferModal" tabindex="-1" aria-labelledby="money-transferModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="money-transferModalLabel">Przelew środków</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="w-100">
+                        <label for="inp-acc-number" class="form-label">Numer konta odbiorcy</label>
+                        <input type="number" class="form-control" id="inp-acc-number" aria-describedby="inp-acc-number">
+                    </div>
+                    <div class="w-100">
+                        <label for="inp-sent-money" class="form-label">Kwota przelewu</label>
+                        <input type="number" class="form-control" id="inp-sent-money" aria-describedby="inp-sent-money">
+                    </div>
+                </div>
+                <!--<span class="mt-2">Podany numer konta nie istnieje!</span>-->
+                <!--<span class="mt-2">Nie posiadasz wystarczających środków na koncie!</span>-->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="main-btn">Zrealizuj przelew</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="card-managementModal" tabindex="-1" aria-labelledby="card-managementModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="card-managementModalLabel">Zarządzanie kartą debetową</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-5 w-100">
+                    <label for="inp-change-pin" class="form-label">Zmiana kodu PIN karty</label>
+                    <input type="number" class="form-control mb-2" id="inp-new-pin" aria-describedby="inp-new-pin" placeholder="Nowy kod PIN (4 cyfry)">
+                    <input type="number" class="form-control mb-2" id="inp-security-code" aria-describedby="inp-security-code" placeholder="Kod bezpieczeństwa">
+                    <button class="main-btn w-100" type="button">Zmień PIN</button>
+                </div>
+                <div class="w-100">
+                    <label for="inp-acc-number" class="form-label">Blokada karty debetowej</label>
+                    <input type="number" class="form-control mb-1" id="inp-security-code2" aria-describedby="inp-security-code2" placeholder="Kod bezpieczeństwa">
+                    <span class="mb-2">Blokada karty debetowej w przypadku zgubienia lub kradzieży.</span>
+                    <button class="main-btn w-100" type="button">Zablokuj kartę</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="no-card-infoModal" tabindex="-1" aria-labelledby="no-card-infoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="no-card-infoModalLabel">Rejestracja karty debetowej</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <span>Twoja karta debetowa nie została zarejestrowana. Aby móc dokonywać płatności przy jej pomocy, udaj się do jednego z naszych oddziałów i poproś pracownika o rejestrację karty.</span>
+            </div>
+        </div>
+    </div>
+</div>

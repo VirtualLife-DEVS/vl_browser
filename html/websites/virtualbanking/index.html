@@ -1,0 +1,61 @@
+<div class="body">
+    <div id="login">
+        <div id="form-container" class="d-none">
+            <div class="login-forms d-none">
+                <div class="header">
+                    <span class="title">Zaloguj się do systemu bankowości</span>
+                </div>
+                <form>
+                    <div class="mb-2">
+                        <input type="username" class="form-control" id="username" placeholder="Nazwa użytkownika">
+                    </div>
+                    <div class="mb-2">
+                        <input type="password" class="form-control" id="password" placeholder="Hasło">
+                    </div>
+                    <button data-browser-subpage="dashboard" data-browser-subpage-target=".body" class="main-btn login-btn" type="button">
+                        Zaloguj się
+                    </button>
+                    <span>To konto nie istnieje lub wprowadzono niepoprawne dane!</span>
+                </form>
+                <div class="footer">
+                    <span>Nie pamiętasz hasła? <a id="go-remindpass-btn">Zresetuj je!</a></span>
+                </div>
+            </div>
+            <div class="remindpass-forms d-none">
+                <div class="header">
+                    <span class="title">Resetowanie hasła</span>
+                </div>
+                <form>
+                    <div class="mb-2">
+                        <input type="username" class="form-control" id="username" placeholder="Nazwa użytkownika">
+                    </div>
+                    <div class="mb-2">
+                        <input type="number" class="form-control" id="securitycode" placeholder="Kod bezpieczeństwa">
+                    </div>
+                    <button class="main-btn login-btn" type="button">Resetuj hasło</button>
+                    <span>To konto nie istnieje lub wprowadzono niepoprawne dane!</span>
+                </form>
+                <div class="footer">
+                    <button id="go-prev-remindpass-btn" class="main-btn prev-btn" type="button">Wróć</button>
+                </div>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="left-container">
+                <div class="header">
+                    <span class="title">Witaj w bankowości internetowej virtualBanking</span>
+                    <span class="slogan">Bank zmieniającego się świata</span>
+                </div>
+                <div class="login-button-box">
+                    <button id="go-login-btn" class="main-btn login-btn" type="button">Logowanie</button>
+                </div>
+                <div class="footer">
+                    <span>Nie jesteś klientem naszego banku? W celu utworzenia konta osobistego udaj się do jednego z naszych oddziałów i poproś pracownika o utworzenie konta.</span>
+                </div>
+            </div>
+            <div class="right-container">
+                <img data-image="vbLogo.png">
+            </div>
+        </div>
+    </div>
+</div>

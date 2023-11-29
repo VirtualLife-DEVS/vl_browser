@@ -1,0 +1,183 @@
+<script>
+    $('.main-subpage').loadSubPage('dashboard.html');
+</script>
+
+<div class="body">
+    <div class="sidebar">
+        <div class="header">
+            <img data-image="logo.png">
+        </div>
+        <div class="menu">
+            <div class="sidebar-nav">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a data-bs-target="#dashboard-cat" class="nav-link nav-cat" href="#" data-bs-toggle="collapse" aria-expanded="true">
+                            Dashboard
+                            <span class="active-notif"></span>
+                        </a>
+                        <div class="nav-collapse collapse show" id="dashboard-cat">
+                            <ul class="list-unstyled">
+                                <li><a class="nav-link active" data-browser-subpage="dashboard" data-browser-subpage-target=".main-subpage">
+                                    Strona główna
+                                </a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a data-bs-target="#persons-cat" class="nav-link nav-cat" href="#" data-bs-toggle="collapse" aria-expanded="false">
+                            Obywatele
+                        </a>
+                        <div class="nav-collapse collapse" id="persons-cat">
+                            <ul class="list-unstyled">
+                                <li><a class="nav-link" data-browser-subpage="citizen-base" data-browser-subpage-target=".main-subpage">
+                                    Rejestr obywateli
+                                </a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a data-bs-target="#vehicles-cat" class="nav-link nav-cat" href="#" data-bs-toggle="collapse" aria-expanded="false">
+                            Pojazdy
+                        </a>
+                        <div class="nav-collapse collapse" id="vehicles-cat">
+                            <ul class="list-unstyled">
+                                <li><a class="nav-link" data-browser-subpage="dashboard" data-browser-subpage-target=".main-subpage">
+                                    Rejestr pojazdów
+                                </a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a data-bs-target="#realestate-cat" class="nav-link nav-cat" href="#" data-bs-toggle="collapse" aria-expanded="false">
+                            Nieruchomości
+                        </a>
+                        <div class="nav-collapse collapse" id="realestate-cat">
+                            <ul class="list-unstyled">
+                                <li><a class="nav-link" data-browser-subpage="dashboard" data-browser-subpage-target=".main-subpage">
+                                    Rejestr nieruchomości
+                                </a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a data-bs-target="#businessactivities-cat" class="nav-link nav-cat" href="#" data-bs-toggle="collapse" aria-expanded="false">
+                            Działalności gospodarcze
+                        </a>
+                        <div class="nav-collapse collapse" id="businessactivities-cat">
+                            <ul class="list-unstyled">
+                                <li><a class="nav-link" data-browser-subpage="dashboard" data-browser-subpage-target=".main-subpage">
+                                    Rejestr działalności
+                                </a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="topbar">
+            <div class="header">
+                <span class="title">Urząd miasta w Los Santos</span>
+                <span class="slogan">Panel zarządzania</span>
+            </div>
+            <div class="user-panel">
+                <span class="username">Witaj Imię Nazwisko</span>
+                <span class="rankname">Burmistrz</span>
+            </div>
+            <div class="notifications">
+                <button class="main-btn" data-bs-toggle="modal" data-bs-target="#notifsModal" type="button">
+                    <span class="active-notif active"></span>
+                    <span class="iconify icon" data-icon="clarity:notification-solid"></span>
+                </button>
+                <button class="main-btn" data-bs-toggle="modal" data-bs-target="#notifs-messageModal" type="button">
+                    <span class="active-notif"></span>
+                    <span class="iconify icon" data-icon="mdi:email"></span>
+                </button>
+                <button class="main-btn" type="button">
+                    <span class="iconify icon" data-icon="heroicons-outline:logout"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="main-subpage"></div>
+    </div>
+</div>
+
+
+
+
+<div class="modal fade" id="notifsModal" tabindex="-1" aria-labelledby="notifsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="notifsModalLabel">Powiadomienia</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="notif-box unread">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <span class="title">Nazwa powiadomienia</span>
+                        <span class="timedate">Dziś, 21:11</span>
+                    </div>
+                    <span class="notif-info">Informacje dotyczące powiadomienia...</span>
+                </div>
+                <div class="notif-box unread">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <span class="title">Nazwa powiadomienia</span>
+                        <span class="timedate">Wczoraj, 21:11</span>
+                    </div>
+                    <span class="notif-info">Informacje dotyczące powiadomienia...</span>
+                </div>
+                <div class="notif-box">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <span class="title">Nazwa powiadomienia</span>
+                        <span class="timedate">27.04.2023, 21:11</span>
+                    </div>
+                    <span class="notif-info">Informacje dotyczące powiadomienia...</span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary">Oznacz wszystkie jako przeczytane</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="notifs-messageModal" tabindex="-1" aria-labelledby="notifs-messageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="notifs-messageModalLabel">Wiadomości</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="notif-box unread">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <span class="title">Tytuł wiadomości</span>
+                        <span class="timedate">Dziś, 21:11</span>
+                    </div>
+                    <span class="notif-info">...</span>
+                </div>
+                <div class="notif-box unread">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <span class="title">Tytuł wiadomości</span>
+                        <span class="timedate">Dziś, 21:11</span>
+                    </div>
+                    <span class="notif-info">...</span>
+                </div>
+                <div class="notif-box">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <span class="title">Tytuł wiadomości</span>
+                        <span class="timedate">Dziś, 21:11</span>
+                    </div>
+                    <span class="notif-info">...</span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary">Wszystkie wiadomości</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,74 @@
+<div class="box">
+    <div class="box-title">
+        <span>Tytuł wiadomości</span>
+    </div>
+    <div class="messages-list">
+        <div class="message">
+            <div class="d-flex align-items-center justify-content-between">
+                <span class="email">imienazwisko@vmail.com</span>
+                <span class="timedate">12.05.2023, 17:00</span>
+            </div>
+            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus eligendi doloremque vel aspernatur reprehenderit distinctio expedita recusandae eaque suscipit accusamus, voluptates officiis et excepturi ea debitis cum soluta ab ullam.</span>
+        </div>
+        <div class="message">
+            <div class="d-flex align-items-center justify-content-between">
+                <span class="email">kontakt@nazwagrupy.com</span>
+                <span class="timedate">Wczoraj, 17:00</span>
+            </div>
+            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus eligendi doloremque vel aspernatur reprehenderit distinctio expedita recusandae eaque suscipit accusamus, voluptates officiis et excepturi ea debitis cum soluta ab ullam.</span>
+        </div>
+        <div class="message">
+            <div class="d-flex align-items-center justify-content-between">
+                <span class="email">imienazwisko@vmail.com</span>
+                <span class="timedate">Dziś, 17:00</span>
+            </div>
+            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus eligendi doloremque vel aspernatur reprehenderit distinctio expedita recusandae eaque suscipit accusamus, voluptates officiis et excepturi ea debitis cum soluta ab ullam.</span>
+        </div>
+    </div>
+    <div class="reply-button">
+        <button class="main-btn" data-bs-toggle="modal" data-bs-target="#replyModal" type="button">
+            <span class="iconify icon" data-icon="material-symbols:reply"></span>
+            Odpowiedz
+        </button>
+        <button class="main-btn" data-bs-toggle="modal" data-bs-target="#deletemsgModal" type="button">
+            <span class="iconify icon" data-icon="material-symbols:delete"></span>
+            Usuń konwersację
+        </button>
+    </div>
+</div>
+
+
+<div class="modal fade" id="replyModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="replyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="replyModalLabel">Odpowiedz na wiadomość</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <textarea class="form-control" id="" placeholder="Treść wiadomości..." rows="15"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success">Odpowiedz</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="deletemsgModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="deletemsgModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deletemsgModalLabel">Usuń konwersację</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Czy na pewno chcesz usunąć tę konwersację?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary">Anuluj</button>
+                <button type="button" class="btn btn-success">Usuń</button>
+            </div>
+        </div>
+    </div>
+</div>

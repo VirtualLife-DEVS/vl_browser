@@ -1,0 +1,31 @@
+<script>
+    setUrl('login');
+</script>
+<div class="login-container">
+    <div class="login-logo">
+        <img data-image="logo.png">
+    </div>
+    <div class="login-title">
+        <span class="title">Los Santos Police Department</span>
+        <span class="name">CAD</span>
+    </div>
+
+    <!-- 
+        Logowanie jest zrobione dla wyglądu. W nazwie użytkownika (placeholder) niech automatycznie
+        uzupełnia się imieniem i nazwiskiem postaci, która się loguje.
+    -->
+
+    <div class="login-form">
+        <div class="mb-2">
+            <label for="usernameInp" class="form-label">Nazwa użytkownika</label>
+            <input placeholder="Imię Nazwisko" type="text" class="form-control" id="usernameInp" aria-describedby="usernameInp">
+        </div>
+        <div class="mb-3">
+            <label for="passInp" class="form-label">Hasło</label>
+            <input placeholder="****************" type="password" class="form-control" id="passInp" aria-describedby="passInp">
+        </div>
+        <button class="btn btn-success w-100" data-browser-subpage="index" data-browser-subpage-target=".body" type="button">
+            Zaloguj
+        </button>
+    </div>
+</div>

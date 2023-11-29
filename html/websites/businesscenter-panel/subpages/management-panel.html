@@ -1,0 +1,23 @@
+<script>
+    setUrl('management');
+</script>
+
+<div class="main-container">
+    <div class="management-menu">
+        <button class="main-btn active" data-browser-subpage="m-workers" data-browser-subpage-target="#management-subpage" type="button">Pracownicy</button>
+        <button class="main-btn" data-browser-subpage="m-news" data-browser-subpage-target="#management-subpage" type="button">Aktualności</button>
+        <button class="main-btn" data-browser-subpage="m-offers" data-browser-subpage-target="#management-subpage" type="button">Oferta</button>
+        <button class="main-btn" data-browser-subpage="m-fastcontact" data-browser-subpage-target="#management-subpage" type="button">Kontakt z zarządem</button>
+        <button class="main-btn" data-browser-subpage="m-messages" data-browser-subpage-target="#management-subpage" data-tooltip="2 nowe wiadomości" data-flow="top" type="button">
+            Wiadomości
+            <span class="notif-dot active"></span>
+        </button>
+        <button disabled class="main-btn ms-5" data-browser-subpage="m-paid-services" data-browser-subpage-target="#management-subpage" type="button">Usługi płatne - wkrótce</button>
+    </div>
+</div>
+
+<div id="management-subpage">
+    <script>
+        $('#management-subpage').loadSubPage('m-workers');
+    </script>
+</div>

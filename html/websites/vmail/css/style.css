@@ -1,0 +1,302 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    
+    background-color: #ececec;
+    color: #191919;
+    font-weight: 400;
+    overflow-y: auto;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+.form-check-input {
+    border: 1px solid #3e657e;
+}
+.form-check-input:checked {
+    background-color: #3e657e;
+}
+.form-check-input:focus {
+    border: 1px solid #3e657e;
+    box-shadow: none;
+}
+
+.modal .form-control {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+.modal .form-control:focus {
+    box-shadow: none;
+}
+
+.main-container {
+    margin: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.header .logo {
+    width: 200px;
+}
+.header .logo img {
+    width: 100%;
+    height: auto;
+}
+.header .slogan span {
+    font-size: 20px;
+}
+
+.info-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.info-content .account-create-info {
+    display: flex;
+    flex-direction: column;
+    border-right: 7px solid #ff8d13;
+    padding: 0 20px;
+}
+.info-content .account-create-info span {
+    font-size: 18px;
+}
+
+
+
+.sidebar {
+    position: absolute;
+    width: 250px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.sidebar .header {
+    justify-content: center;
+    padding: 10px 20px;
+}
+.sidebar .create-email {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
+.sidebar .create-email .create-email-btn {
+    background-color: #3e657e;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    width: 160px;
+    color: #fff;
+    opacity: 0.8;
+    transition: all 0.4s ease-in-out;
+}
+.sidebar .create-email .create-email-btn:hover {
+    opacity: 1;
+}
+.sidebar .create-email .create-email-btn .icon {
+    font-size: 20px;
+}
+.sidebar .menu {
+    display: flex;
+    flex-direction: column;
+}
+.sidebar .menu .menu-btn {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    border: none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 5px 20px;
+    font-size: 12px;
+    font-weight: 300;
+}
+.sidebar .menu .menu-btn:hover {
+    background-color: #d8d8d8;
+}
+.sidebar .menu .menu-btn.active {
+    background-color: #3e657e;
+    color: #fff;
+    font-weight: 500;
+}
+.sidebar .menu .menu-btn .icon {
+    font-size: 18px;
+}
+
+.main {
+    padding-left: 250px;
+    overflow-y: auto;
+}
+.main .search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    position: relative;
+    margin: 20px;
+}
+.main .search-bar .search {
+    width: 100%;
+}
+.main .search-bar .main-email-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+.main .search-bar .main-email-info .title {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.main .search-bar .icon {
+    position: absolute;
+    top: 50%;
+    left: 1%;
+    font-size: 18px;
+    color: #fff;
+    transform: translate(0, -50%);
+}
+.main .search-bar .form-control {
+    background-color: #3e657e;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 50px;
+    color: #fff;
+    transition: all 0.4s ease-in-out;
+}
+.main .search-bar .form-control::placeholder {
+    color: #fff;
+}
+.main .search-bar .form-control:focus {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border: none;
+    color: #191919;
+}
+.main .search-bar .form-control:focus::placeholder {
+    color: #191919;
+}
+
+.main #main-container {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+}
+.main #main-container .table {
+    --bs-table-hover-bg: rgba(0, 0, 0, 0.1);
+}
+.main #main-container .table tr:hover {
+    cursor: pointer;
+}
+.main #main-container .table .new-email {
+    font-weight: 600 !important;
+}
+.main #main-container .table .email {
+    font-weight: 400;
+}
+.main #main-container .table .email-title {
+    font-weight: 400;
+}
+.main #main-container .table .timedate {
+    font-size: 10px;
+    font-weight: 400;
+    opacity: 0.6;
+}
+.main #main-container .table .draft {
+    font-weight: 400;
+    color: #ff5353;
+}
+.main #main-container .info-table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d3d3d3;
+    padding: 15px;
+}
+.main #main-container .info-table span {
+    font-weight: 400;
+    font-size: 11px;
+}
+.main #main-container .select-bar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 5px;
+}
+.main #main-container .select-bar .main-btn {
+    padding: 0;
+    margin: 0;
+    color: #191919;
+    font-size: 22px;
+    opacity: 0.5;
+    transition: 0.2s ease-in-out;
+}
+.main #main-container .select-bar .main-btn:hover {
+    opacity: 1;
+}
+
+.main #main-container .email-container .e-title,
+.main #main-container .email-container .e-informations {
+    padding: 20px;
+}
+.main #main-container .email-container .e-title span {
+    font-size: 16px;
+}
+.main #main-container .email-container .e-informations {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.main #main-container .email-container .e-informations .adress-email {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+}
+.main #main-container .email-container .e-informations .adress-email .timedate {
+    font-size: 10px;
+    font-weight: 400;
+    opacity: 0.7;
+}
+.main #main-container .email-container .e-message {
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+.main #main-container .email-container .reply-button {
+    padding: 20px;
+}
+.main #main-container .email-container .reply-button .main-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    border: 1px solid #3e657e;
+    border-radius: 20px;
+    padding: 5px 10px;
+    color: #191919;
+    transition: 0.3s ease-in-out;
+}
+.main #main-container .email-container .reply-button .main-btn .icon {
+    font-size: 18px;
+}
+.main #main-container .email-container .reply-button .main-btn:hover {
+    background-color: #ececec;
+}

@@ -1,0 +1,57 @@
+<script>
+    setUrl('');
+</script>
+
+<div class="topbar">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <div class="logo">
+                <img data-image="logo.png">
+                <div class="d-flex flex-column lh-1">
+                    <span class="title">LSPD CAD</span>
+                    <span class="name">Computer-Aided Dispatch</span>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav gap-2 ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a data-browser-subpage="dashboard" data-browser-subpage-target="#subpages" class="nav-link active" aria-current="page">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-browser-subpage="reporting-center" data-browser-subpage-target="#subpages" class="nav-link">Centrum zgłoszeń</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-browser-subpage="citizens" data-browser-subpage-target="#subpages" class="nav-link">Obywatele</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-browser-subpage="vehicles" data-browser-subpage-target="#subpages" class="nav-link">Pojazdy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-browser-subpage="cameras" data-browser-subpage-target="#subpages" class="nav-link">Kamery</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="raportsDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Raporty
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="raportsDropdown">
+                            <li><a class="dropdown-item">Traffic Division</a></li>
+                            <li><a class="dropdown-item">South Division</a></li>
+                            <li><a class="dropdown-item">Central Division</a></li>
+                            <li><a class="dropdown-item">Detective Bureau</a></li>
+                            <li><a class="dropdown-item">Metropolitan Division</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a data-browser-subpage="managment" data-browser-subpage-target="#subpages" class="nav-link">Panel zarządzania</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<script>
+    $('#subpages').loadSubPage('dashboard');
+</script>
+<div id="subpages"></div>

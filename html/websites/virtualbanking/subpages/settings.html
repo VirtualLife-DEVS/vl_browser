@@ -1,0 +1,176 @@
+<script>
+    setUrl('settings');
+</script>
+
+<div class="main-container">
+    <span class="page-title">Ustawienia</span>
+</div>
+<div class="main-container">
+    <div class="d-flex align-items-streetch gap-4">
+        <div class="page-element p-3">
+            <div class="d-flex align-items-center gap-4 justify-content-between">
+                <div class="d-flex flex-column">
+                    <span class="title">ZMIANA NAZWY UŻYTKOWNIKA</span>
+                    <span>Zmień nazwę użytkownika dla swojego konta.</span>
+                </div>
+                <button class="main-btn settings-btn" data-bs-toggle="modal" data-bs-target="#settings-change-usernameModal" type="button">
+                    Zmień
+                </button>
+            </div>
+        </div>
+        <div class="page-element p-3">
+            <div class="d-flex align-items-center gap-4 justify-content-between">
+                <div class="d-flex flex-column">
+                    <span class="title">ZMIANA HASŁA</span>
+                    <span>Ustaw nowe hasło dla swojego konta.</span>
+                </div>
+                <button class="main-btn settings-btn" data-bs-toggle="modal" data-bs-target="#settings-change-passwordModal" type="button">
+                    Zmień
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main-container">
+    <div class="d-flex align-items-streetch gap-4">
+        <div class="page-element p-3">
+            <div class="d-flex align-items-center gap-4 justify-content-between">
+                <div class="d-flex flex-column">
+                    <span class="title">ZMIANA KODU BEZPIECZEŃSTWA</span>
+                    <span>Ustaw nowy kod bezpieczeństwa dla swojego konta.</span>
+                </div>
+                <button class="main-btn settings-btn" data-bs-toggle="modal" data-bs-target="#settings-change-securitycodeModal" type="button">
+                    Zmień
+                </button>
+            </div>
+        </div>
+        <div class="page-element p-3">
+            <div class="d-flex align-items-center gap-4 justify-content-between">
+                <div class="d-flex flex-column">
+                    <span class="title">ZAMROŻENIE KONTA</span>
+                    <span>Zamróż swoje konto i uczyń je nieaktywnym. Zapobiegnie to pobieraniu środków za prowadzenie konta w przypadku dłuższej nieaktywności.</span>
+                    <span>UWAGA! Tej opcji można użyć raz na 7 dni.</span>
+                </div>
+                <button class="main-btn settings-btn" data-bs-toggle="modal" data-bs-target="#settings-freezeaccountModal" type="button">
+                    Zamróż
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main-container">
+    <div class="d-flex align-items-streetch gap-4">
+        <div class="page-element p-3">
+            <div class="d-flex align-items-center gap-4 justify-content-between">
+                <div class="d-flex flex-column">
+                    <span class="title">USUWANIE KONTA</span>
+                    <span>Trwale usuń swoje konto bankowe. Usunięcie konta jest trwałym i nieodwracalnym procesem!</span>
+                </div>
+                <button class="main-btn settings-btn" data-bs-toggle="modal" data-bs-target="#settings-deleteaccountModal" type="button">
+                    Trwale usuń konto
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="modal fade" id="settings-change-usernameModal" tabindex="-1" aria-labelledby="settings-change-usernameModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="settings-change-usernameModalLabel">Zmiana nazwy użytkownika</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="w-100">
+                    <input type="number" class="form-control mb-2" id="inp-new-username" aria-describedby="inp-new-username" placeholder="Nowa nazwa użytkownika">
+                    <input type="number" class="form-control mb-2" id="inp-security-code" aria-describedby="inp-security-code" placeholder="Kod bezpieczeństwa">
+                    <button class="main-btn w-100" type="button">Zmień nazwę użytkownika</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="settings-change-passwordModal" tabindex="-1" aria-labelledby="settings-change-passwordModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="settings-change-passwordModalLabel">Zmiana hasła</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="w-100">
+                    <input type="number" class="form-control mb-2" id="inp-new-password" aria-describedby="inp-new-password" placeholder="Nowe hasło">
+                    <input type="number" class="form-control mb-2" id="inp-security-code" aria-describedby="inp-security-code" placeholder="Kod bezpieczeństwa">
+                    <button class="main-btn w-100" type="button">Zmień hasło</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="settings-change-securitycodeModal" tabindex="-1" aria-labelledby="settings-change-securitycodeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="settings-change-securitycodeModalLabel">Zmiana kodu bezpieczeństwa</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="w-100">
+                    <input type="number" class="form-control mb-2" id="inp-new-securitycode" aria-describedby="inp-new-securitycode" placeholder="Nowy kod bezpieczeństwa">
+                    <input type="number" class="form-control mb-2" id="inp-security-code" aria-describedby="inp-security-code" placeholder="Kod bezpieczeństwa">
+                    <button class="main-btn w-100" type="button">Zmień kod bezpieczeństwa</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="settings-freezeaccountModal" tabindex="-1" aria-labelledby="settings-freezeaccountModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="settings-freezeaccountModalLabel">Zamrażanie konta</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-2">
+                    <span>UWAGA! Swoje konto możesz zamrozić raz na 7 dni.</span>
+                </div>
+                <div class="w-100">
+                    <input type="number" class="form-control mb-2" id="inp-security-code" aria-describedby="inp-security-code" placeholder="Kod bezpieczeństwa">
+                    <button class="main-btn w-100" type="button">Zamróż konto</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="settings-deleteaccountModal" tabindex="-1" aria-labelledby="settings-deleteaccountModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="settings-deleteaccountModalLabel">Usuwanie konta</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-2">
+                    <span>UWAGA! Usunięcie konta jest trwałym i nieodwracalnym procesem!</span>
+                </div>
+                <div class="w-100">
+                    <input type="number" class="form-control mb-2" id="inp-security-code" aria-describedby="inp-security-code" placeholder="Kod bezpieczeństwa">
+                    <button class="main-btn w-100" type="button">Usuń konto</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

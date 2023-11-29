@@ -1,0 +1,191 @@
+<script>
+    setUrl('reporting-center');
+</script>
+
+<div id="reporting-center">
+    <div class="container">
+        <div class="page-title">
+            <span>Centrum zgłoszeń</span>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="row row-cols-1 gap-4">
+                    <div class="col">
+                        <div class="page-element">
+                            <div class="element-title">
+                                <span>Zgłoszenia 9-1-1</span>
+                            </div>
+                            <div id="player-reports" class="element-content">
+                                <div class="report-box" data-bs-toggle="modal" data-bs-target="#report-descriptionModal">
+                                    <div class="report-title">
+                                        <span class="report-number">#1</span>
+                                        <span class="report-name">Wypadek</span>
+                                    </div>
+                                    <div class="report-informations">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="iconify icon" data-icon="mingcute:time-fill"></span>
+                                            <span class="title">Nadesłano:</span>
+                                            <span class="value">1h 20min temu</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="iconify icon" data-icon="ooui:map-pin"></span>
+                                            <span class="title">Lokalizacja:</span>
+                                            <span class="value">Mirror Park Blvd, East Vinewood</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="iconify icon" data-icon="teenyicons:id-solid"></span>
+                                            <span class="title">Zgłaszający:</span>
+                                            <span class="value">Imię Nazwisko</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="iconify icon" data-icon="zondicons:phone"></span>
+                                            <span class="title">Numer telefonu:</span>
+                                            <span class="value">123123</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="report-box accepted" data-bs-toggle="modal" data-bs-target="#report-descriptionModal">
+                                    <div class="report-title">
+                                        <span class="report-number">#2</span>
+                                        <span class="report-name">Nazwa zgłoszenia</span>
+                                    </div>
+                                    <div class="report-informations">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="iconify icon" data-icon="mingcute:time-fill"></span>
+                                            <span class="title">Nadesłano:</span>
+                                            <span class="value">2min temu</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="iconify icon" data-icon="ooui:map-pin"></span>
+                                            <span class="title">Lokalizacja:</span>
+                                            <span class="value">Mirror Park Blvd, East Vinewood</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="iconify icon" data-icon="teenyicons:id-solid"></span>
+                                            <span class="title">Zgłaszający:</span>
+                                            <span class="value">Imię Nazwisko</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="iconify icon" data-icon="zondicons:phone"></span>
+                                            <span class="title">Numer telefonu:</span>
+                                            <span class="value">123123</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="page-element">
+                            <div class="element-title">
+                                <span>Zgłoszenia z dyspozytorni</span>
+                            </div>
+                            <div id="local-reports" class="element-content">
+                                <div class="dropdown dropend">
+                                    <div class="report-box" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <div class="report-title">
+                                            <span class="report-number">#1</span>
+                                            <span class="report-name">Strzały</span>
+                                        </div>
+                                        <div class="report-informations">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span class="iconify icon" data-icon="mingcute:time-fill"></span>
+                                                <span class="title">Nadesłano:</span>
+                                                <span class="value">1h 20min temu</span>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span class="iconify icon" data-icon="ooui:map-pin"></span>
+                                                <span class="title">Lokalizacja:</span>
+                                                <span class="value">Mirror Park Blvd, East Vinewood</span>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span class="iconify icon" data-icon="ph:gender-intersex-bold"></span>
+                                                <span class="title">Podejrzany:</span>
+                                                <span class="value">Mężczyzna</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item">Przyjmij zgłoszenie</a></li>
+                                        <li><a class="dropdown-item">Ustaw lokalizację</a></li>
+                                        <li><a class="dropdown-item">Usuń zgłoszenie</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown dropend">
+                                    <div class="report-box" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <div class="report-title">
+                                            <span class="report-number">#2</span>
+                                            <span class="report-name">Nazwa zgłoszenia</span>
+                                        </div>
+                                        <div class="report-informations">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span class="iconify icon" data-icon="mingcute:time-fill"></span>
+                                                <span class="title">Nadesłano:</span>
+                                                <span class="value">2min temu</span>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span class="iconify icon" data-icon="ooui:map-pin"></span>
+                                                <span class="title">Lokalizacja:</span>
+                                                <span class="value">Mirror Park Blvd, East Vinewood</span>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span class="iconify icon" data-icon="ph:gender-intersex-bold"></span>
+                                                <span class="title">Podejrzany:</span>
+                                                <span class="value">Kobieta</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item">Przyjmij zgłoszenie</a></li>
+                                        <li><a class="dropdown-item">Ustaw lokalizację</a></li>
+                                        <li><a class="dropdown-item">Usuń zgłoszenie</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-8">
+                <div class="row row-cols-1 gap-4">
+                    <div class="col">
+                        <div class="page-element">
+                            <div class="element-title">
+                                <span>Mapa</span>
+                            </div>
+                            <div class="element-content">
+                                <div id="map">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="report-descriptionModal" tabindex="-1" aria-labelledby="report-descriptionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="report-descriptionModalLabel">Opis zgłoszenia</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt, totam nulla. Hic modi eum ducimus in ea iste ab culpa sit quaerat, cum nemo possimus minima incidunt asperiores sequi voluptatibus!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success">Przyjmij zgłoszenie</button>
+                <button type="button" class="btn btn-secondary">Ustaw lokalizację</button>
+                <button type="button" class="btn btn-danger">Usuń zgłoszenie</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="javascript/map.js" ></script>

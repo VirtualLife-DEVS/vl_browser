@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html lang="pl-PL">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title></title>
+        <meta name="author" content="PIXEL DESIGN">
+        <meta http-equiv="X-Ua-Compatible" content="IE=edge">
+
+        <!-- [BOOTSTRAP] -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- [JQUERY] -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- [MAPA] -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="">
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    
+        <script src="javascript/general.js" async></script>
+    </head>
+    <body>
+        
+    <!-- ================================ UI ================================== -->
+    <!-- ====================================================================== -->
+    
+        <div id="vl_browser">
+            <div class="browser-topbar">
+                <div class="browser-icon">
+                    <span class="iconify icon" data-bs-toggle="modal" data-bs-target="#browserinfoModal" data-icon="simple-icons:v"></span>
+                </div>
+                <div class="topbar">
+                    <div class="topbar-cards">
+                        <div style="border-bottom:1px solid #ff8b13; width:30px"></div>
+                        <div class="card-list">
+                            <div class="main-card active text-truncate">
+                                <span class="iconify" id="page-icon" data-icon="emojione-monotone:globe-showing-americas">
+                                </span>
+                                <span id="loading-page" class="d-none">
+                                    <div class="spinner-border" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                </span>
+                                <span id="card-name" class="text-truncate">Nazwa karty...</span>
+                                <span class="iconify close-card ms-auto" data-icon="ph:x"></span>
+                            </div>
+                            <div class="main-card text-truncate">
+                                <span class="iconify" id="page-icon" data-icon="emojione-monotone:globe-showing-americas">
+                                </span>
+                                <span id="loading-page" class="d-none">
+                                    <div class="spinner-border" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                </span>
+                                <span id="card-name" class="text-truncate">Nazwa karty...</span>
+                                <span class="iconify close-card ms-auto" data-icon="ph:x"></span>
+                            </div>
+                        </div>
+                        <div class="add-card">
+                            <span class="iconify icon" data-icon="material-symbols:add"></span>
+                        </div>
+                        <div style="border-bottom:1px solid #ff8b13; width:100%"></div>
+                        <div class="topbar-icons">
+                            <button class="main-btn minimalize-btn" type="button"><span class="iconify" data-icon="cil:window-minimize"></span></button>
+                            <button class="main-btn" type="button"><span class="iconify" data-icon="clarity:window-restore-line"></span></button>
+                            <button class="main-btn close-btn" type="button"><span class="iconify" data-icon="ph:x"></span></button>
+                        </div>
+                    </div>
+                    <div class="topbar-searchbar">
+                        <div class="searchbar-icons">
+                            <button class="main-btn" type="button"><span class="iconify" data-icon="ep:arrow-left"></span></button>
+                            <button class="main-btn" type="button"><span class="iconify" data-icon="ep:arrow-right"></span></button>
+                            <button class="main-btn" type="button"><span class="iconify" data-icon="ion:refresh"></span></button>
+                            <button data-browser-page="vbrowser" class="main-btn" type="button"><span class="iconify" data-icon="codicon:home"></span></button>
+                        </div>
+                        <div class="searchbar">
+                            <button class="search-btn" type="button" id="dropdown-searchbar" data-bs-toggle="dropdown" aria-expanded="false">
+                                Szukaj adres
+                            </button>
+                            <ul id="address-search" class="dropdown-menu" aria-labelledby="dropdown-searchbar" style="width:100%">
+                            </ul>
+                        </div>
+                        <div class="searchbar-icons">
+                            <button class="main-btn" type="button"><span class="iconify" data-icon="lucide:box"></span></button>
+                            <button class="main-btn" type="button"><span class="iconify" data-icon="carbon:download"></span></button>
+                            <button class="main-btn" type="button"><span class="iconify" data-icon="akar-icons:settings-horizontal"></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="browser-container">
+                <div class="browser-leftbar"></div>
+                
+                <!-- LOAD PAGE -->
+                <div id="browser-page">
+                    <!-- tutaj wczytuje się strona -->
+                </div>
+            </div>
+
+        </div>
+    
+
+        <div class="modal fade" id="browserinfoModal" tabindex="-1" aria-labelledby="browserinfoModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="browserinfoModalLabel">VirtualBrowser - Przeglądarka internetowa</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <span>VirtualBrowser to przeglądarka internetowa (serwerowa) oparta na naszym, autorskim systemie.</span>
+                        <span>Wszystkie znajdujące się w przeglądarce strony internetowe są fikcyjne, stworzone przez PIXEL-DESIGN. Strony są interpretowane jako IC, lecz mogą zawierać elementy OOC.</span>
+                        <span class="mt-2">Opracowanie kodu front-end: Pixel095</span>
+                        <span>Opracowanie kodu back-end: Tomic0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- ====================================================================== -->
+    <!-- ====================================================================== -->
+
+
+    </body>
+</html>

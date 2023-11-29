@@ -1,0 +1,72 @@
+<script>
+    setUrl('dashboard/email');
+</script>
+
+<div class="email-container">
+    <div class="e-title">
+        <span>Tytuł wiadomości</span>
+    </div>
+    <div id="e-messages-list">
+        <div class="e-message">
+            <div class="e-informations">
+                <div class="adress-email">
+                    <span>imienazwisko@vmail.com</span>
+                    <span class="timedate">Dziś, 13:58</span>
+                </div>
+                <div class="message-content">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam laudantium ipsa veniam neque! Nisi, enim deserunt expedita temporibus quo in saepe dolorem mollitia vero natus. Eos debitis optio impedit nobis.
+                </div>
+            </div>
+        </div>
+        <div class="e-message">
+            <div class="e-informations">
+                <div class="adress-email">
+                    <span>imienazwisko@vmail.com</span>
+                    <span class="timedate">Wczoraj, 13:58</span>
+                </div>
+                <div class="message-content">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam laudantium ipsa veniam neque! Nisi, enim deserunt expedita temporibus quo in saepe dolorem mollitia vero natus. Eos debitis optio impedit nobis.
+                </div>
+            </div>
+        </div>
+        <div class="e-message">
+            <div class="e-informations">
+                <div class="adress-email">
+                    <span>imienazwisko@vmail.com</span>
+                    <span class="timedate">05.05.2023, 13:58</span>
+                </div>
+                <div class="message-content">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam laudantium ipsa veniam neque! Nisi, enim deserunt expedita temporibus quo in saepe dolorem mollitia vero natus. Eos debitis optio impedit nobis.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="reply-button">
+        <button class="main-btn" data-bs-toggle="modal" data-bs-target="#reply-emailModal" type="button">
+            <span class="iconify icon" data-icon="material-symbols:reply"></span>
+            <span>Odpowiedz</span>
+        </button>
+    </div>
+</div>
+
+
+
+
+<div class="modal fade" id="reply-emailModal" tabindex="-1" aria-labelledby="reply-emailModalLabel" data-bs-backdrop="static" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="reply-emailModalLabel">Odpowiadanie na wiadomość</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <textarea class="form-control" id="ce-contents-inp" rows="10" placeholder="Treść"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success">Odpowiedz</button>
+            </div>
+        </div>
+    </div>
+</div>
