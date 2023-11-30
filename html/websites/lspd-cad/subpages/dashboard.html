@@ -8,7 +8,134 @@
             <span>Dashboard</span>
         </div>
         <div class="row">
-            <div class="col-3">
+            <div class="col-4">
+                <div class="row row-cols-1 gap-4">
+                    <div class="col">
+                        <div class="page-element">
+                            <div class="element-title">
+                                <span>Patrole</span>
+                                <button data-bs-toggle="modal" data-bs-target="#create-patrolModal" class="btn btn-success ms-auto" type="button">
+                                    Utwórz patrol
+                                </button>
+                            </div>
+                            <div id="patrol-list" class="element-content">
+                                <div class="patrol-box">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="patrol-id">#1</span>
+                                        <button data-bs-target="#patrol1" class="patrol-item on-patrol" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseExample" data-tooltip="Rozwiń" data-flow="top" type="button">
+                                            ADAM-032
+                                        </button>
+                                        <!-- Nie widzi twórca patrolu -->
+                                        <button class="btn btn-secondary" data-tooltip="Dołącz do patrolu" data-flow="top" type="button"><span class="iconify" data-icon="material-symbols:add"></span></button>
+                                        <!-- Nie widzi twórca patrolu -->
+                                        <button class="btn btn-secondary" data-tooltip="Opuść patrol" data-flow="top" type="button"><span class="iconify" data-icon="pajamas:leave"></span></button>
+                                        <!-- Widzi twórca patrolu -->
+                                        <button data-bs-toggle="modal" data-bs-target="#edit-patrolModal" class="btn btn-secondary" data-tooltip="Edytuj patrol" data-flow="top" type="button"><span class="iconify" data-icon="material-symbols:edit"></span></button>
+                                        <!-- Widzi twórca patrolu -->
+                                        <button class="btn btn-danger" data-tooltip="Usuń patrol" data-flow="top" type="button"><span class="iconify" data-icon="material-symbols:delete"></span></button>
+                                    </div>
+                                    <div class="collapse" id="patrol1">
+                                        <div class="card card-body">
+                                            <div class="d-flex align-items-center gap-1">
+                                                <span class="officer-badge">[23123]</span>
+                                                <span class="officer-name">Imię Nazwisko</span>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-1">
+                                                <span class="officer-badge">[12312]</span>
+                                                <span class="officer-name">Imię Nazwisko</span>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-1">
+                                                <span class="status-title">Status:</span>
+                                                <span class="status">W patrolu</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="patrol-box">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="patrol-id">#2</span>
+                                        <button data-bs-target="#patrol2" class="patrol-item on-break" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseExample" data-tooltip="Rozwiń" data-flow="top" type="button">
+                                            ADAM-033
+                                        </button>
+                                        <!-- Nie widzi twórca patrolu -->
+                                        <button class="btn btn-secondary" data-tooltip="Dołącz do patrolu" data-flow="top" type="button"><span class="iconify" data-icon="material-symbols:add"></span></button>
+                                        <!-- Nie widzi twórca patrolu -->
+                                        <button class="btn btn-secondary" data-tooltip="Opuść patrol" data-flow="top" type="button"><span class="iconify" data-icon="pajamas:leave"></span></button>
+                                        <!-- Widzi twórca patrolu -->
+                                        <button data-bs-toggle="modal" data-bs-target="#edit-patrolModal" class="btn btn-secondary" data-tooltip="Edytuj patrol" data-flow="top" type="button"><span class="iconify" data-icon="material-symbols:edit"></span></button>
+                                        <!-- Widzi twórca patrolu -->
+                                        <button class="btn btn-danger" data-tooltip="Usuń patrol" data-flow="top" type="button"><span class="iconify" data-icon="material-symbols:delete"></span></button>
+                                    </div>
+                                    <div class="collapse" id="patrol2">
+                                        <div class="card card-body">
+                                            <div class="d-flex align-items-center gap-1">
+                                                <span class="officer-badge">[23123]</span>
+                                                <span class="officer-name">Imię Nazwisko</span>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-1">
+                                                <span class="officer-badge">[12312]</span>
+                                                <span class="officer-name">Imię Nazwisko</span>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-1">
+                                                <span class="status-title">Status:</span>
+                                                <span class="status">Przerwa</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="page-element">
+                            <div class="element-title">
+                                <span>Dostępni funkcjonariusze</span>
+                            </div>
+                            <div id="available-officers" class="element-content">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="available-officer-item available">
+                                        <div class="d-flex align-items-center gap-1">
+                                            <span class="officer-badge">[12312]</span>
+                                            <span class="officer-name">Imię Nazwisko</span>
+                                            <span class="ms-auto">W patrolu (#1)</span>
+                                        </div>
+                                    </div>
+                                    <button data-bs-toggle="modal" data-bs-target="#set-statusModal" class="btn btn-secondary" data-tooltip="Ustaw status" data-flow="top" type="button"><span class="iconify" data-icon="heroicons-solid:status-online"></span></button>
+                                </div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="available-officer-item available unoccupied">
+                                        <div class="d-flex align-items-center gap-1">
+                                            <span class="officer-badge">[12312]</span>
+                                            <span class="officer-name">Imię Nazwisko</span>
+                                            <span class="ms-auto">Wolny</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="available-officer-item available on-break">
+                                        <div class="d-flex align-items-center gap-1">
+                                            <span class="officer-badge">[12312]</span>
+                                            <span class="officer-name">Imię Nazwisko</span>
+                                            <span class="ms-auto">Przerwa</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="available-officer-item unavailable">
+                                        <div class="d-flex align-items-center gap-1">
+                                            <span class="officer-badge">[12312]</span>
+                                            <span class="officer-name">Imię Nazwisko</span>
+                                            <span class="ms-auto">Poza służbą</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-8">
                 <div class="row row-cols-1 gap-4">
                     <div class="col">
                         <div class="page-element">
@@ -32,29 +159,113 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <div class="col-9">
-                <div class="row row-cols-1 gap-4">
-                    <div class="col">
-                        <div class="page-element">
-                            <div class="element-title">
-                                <span>Title</span>
-                            </div>
-                            <div class="element-content">
-                                asd
-                            </div>
-                        </div>
+    <div class="modal fade" id="create-patrolModal" tabindex="-1" aria-labelledby="create-patrolModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="create-patrolModalLabel">Tworzenie patrolu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-2">
+                        <label for="patrol-nameInp" class="form-label">Nazwa patrolu</label>
+                        <input placeholder="JEDNOSTKA-NUMER RADIOWOZU" type="text" class="form-control" id="patrol-nameInp" aria-describedby="patrol-nameInp">
                     </div>
-                    <div class="col">
-                        <div class="page-element">
-                            <div class="element-title">
-                                <span>Title</span>
-                            </div>
-                            <div class="element-content">
-                                asd
-                            </div>
-                        </div>
+                    <div class="mb-2">
+                        <label for="patrol-statusInp" class="form-label">Status patrolu</label>
+                        <select class="form-select" aria-label="Default select example" id="patrol-statusInp" aria-describedby="patrol-statusInp">
+                            <option selected>Wybierz status</option>
+                            <option value="1">W patrolu</option>
+                            <option value="2">Przerwa</option>
+                        </select>
                     </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Anuluj</button>
+                    <button type="button" class="btn btn-success">Utwórz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="edit-patrolModal" tabindex="-1" aria-labelledby="edit-patrolModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="edit-patrolModalLabel">Edycja patrolu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-2">
+                        <label for="patrol-nameInp" class="form-label">Nazwa patrolu</label>
+                        <input placeholder="JEDNOSTKA-NUMER RADIOWOZU" type="text" class="form-control" id="patrol-nameInp" aria-describedby="patrol-nameInp">
+                    </div>
+                    <div class="mb-2">
+                        <label for="patrol-statusInp" class="form-label">Status patrolu</label>
+                        <select class="form-select" aria-label="Default select example" id="patrol-statusInp" aria-describedby="patrol-statusInp">
+                            <option selected>Wybierz status</option>
+                            <option value="1">W patrolu</option>
+                            <option value="2">Przerwa</option>
+                        </select>
+                    </div>
+                    <div class="mb-2">
+                        <label for="patrol-membersInp" class="form-label">Członkowie patrolu</label>
+                        <table class="table table-sm table-hover table-borderless">
+                            <tbody id="" class="table-dark">
+                                <tr>
+                                    <td>[12312] Imię Nazwisko</td>
+                                    <td class="text-end">
+                                        <button class="btn btn-danger" data-tooltip="Usuń członka" data-flow="top" type="button"><span class="iconify" data-icon="material-symbols:delete"></span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>[12312] Imię Nazwisko</td>
+                                    <td class="text-end">
+                                        <button class="btn btn-danger" data-tooltip="Usuń członka" data-flow="top" type="button"><span class="iconify" data-icon="material-symbols:delete"></span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>[12312] Imię Nazwisko</td>
+                                    <td class="text-end">
+                                        <button class="btn btn-danger" data-tooltip="Usuń członka" data-flow="top" type="button"><span class="iconify" data-icon="material-symbols:delete"></span></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Anuluj</button>
+                    <button type="button" class="btn btn-success">Zapisz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="set-statusModal" tabindex="-1" aria-labelledby="set-statusModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="set-statusModalLabel">Ustaw status</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-2">
+                        <label for="member-statusInp" class="form-label">Twój status</label>
+                        <select class="form-select" aria-label="Default select example" id="member-statusInp" aria-describedby="patrol-statusInp">
+                            <option selected>Wybierz status</option>
+                            <option value="1">W patrolu</option>
+                            <option value="2">Przerwa</option>
+                            <option value="3">Wolny</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Anuluj</button>
+                    <button type="button" class="btn btn-success">Zapisz</button>
                 </div>
             </div>
         </div>
