@@ -1,4 +1,54 @@
 <script>
     setUrl('cameras');
 </script>
-cameras
+
+<div id="cameras">
+    <div class="container">
+        <div class="page-title">
+            <span>Kamery miejskie</span>
+        </div>
+        <div class="row row-cols-5">
+            <div class="col mb-3">
+                <div class="page-element">
+                    <div class="element-title">
+                        <span>Nazwa kamery</span>
+                    </div>
+                    <div class="element-content">
+                        <div class="camera-background">
+                            <img data-image="nopic.jpg" data-bs-toggle="modal" data-bs-target="#camera-previewModal">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-3">
+                <div class="page-element">
+                    <div class="element-title">
+                        <span>Nazwa kamery</span>
+                    </div>
+                    <div class="element-content">
+                        <div class="camera-background">
+                            <img data-image="nopic.jpg" data-bs-toggle="modal" data-bs-target="#camera-previewModal">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="camera-previewModal" tabindex="-1" aria-labelledby="camera-previewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="camera-previewModalLabel">Podgląd kamery</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Zamknij</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

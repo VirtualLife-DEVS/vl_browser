@@ -307,6 +307,31 @@ tbody.table-dark {
 #dashboard #available-officers .available-officer-item.unoccupied {
     background-color: #838326;
 }
+#dashboard #bulletin-boards {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+#dashboard #bulletin-boards .announcement {
+    background-color: #dc3545;
+    padding: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+#dashboard #bulletin-boards .announcement .announcement-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 5px;
+    opacity: 0.5;
+}
+#dashboard #officers-entries .message-textarea {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+}
 
 
 /* REPORTING CENTER ------------------------------------------- */
@@ -348,4 +373,24 @@ tbody.table-dark {
 #reporting-center .report-box .report-informations .btn {
     padding: 0 5px;
     font-weight: 400;
+}
+
+/* CAMERAS ------------------------------------------------- */
+#cameras .camera-background img {
+    width: 100%;
+    height: auto;
+}
+#cameras .camera-background img:hover {
+    cursor: pointer;
+}
+
+
+
+
+/* FOOTER ------------------------------------------------- */
+.footer {
+    background-color: #071c2e;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1.2em;
 }

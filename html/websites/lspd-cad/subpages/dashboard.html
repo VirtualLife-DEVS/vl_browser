@@ -135,25 +135,150 @@
                 </div>
             </div>
 
-            <div class="col-8">
+            <div class="col-5">
                 <div class="row row-cols-1 gap-4">
                     <div class="col">
                         <div class="page-element">
                             <div class="element-title">
-                                <span>Title</span>
+                                <span>Ostatnie 5 wyroków</span>
                             </div>
-                            <div class="element-content">
-                                asd
+                            <div id="recent-verdicts" class="element-content">
+                                <table class="table table-sm table-hover table-borderless">
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th scope="col">Ukarany</th>
+                                            <th scope="col">Ukarał</th>
+                                            <th scope="col" class="text-center">Wyrok</th>
+                                            <th scope="col" class="text-center">Czas</th>
+                                            <th scope="col" class="text-center">Kwota</th>
+                                            <th scope="col" class="text-center">Powód</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="recent-verdicts-table" class="table-dark">
+                                        <tr>
+                                            <td>Imię Nazwisko</td>
+                                            <td>[12312] Imię Nazwisko</td>
+                                            <td class="text-center">
+                                                <span class="badge bg-secondary">Mandat</span>
+                                            </td>
+                                            <td class="text-center">0h0min</td>
+                                            <td class="text-center">$200</td>
+                                            <td class="text-center">
+                                                <button data-bs-toggle="modal" data-bs-target="#verdict-reasonModal" class="btn btn-secondary" type="button"><span class="iconify" data-icon="mdi:eye"></span></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Imię Nazwisko</td>
+                                            <td>[12312] Imię Nazwisko</td>
+                                            <td class="text-center">
+                                                <span class="badge bg-secondary">Areszt</span>
+                                            </td>
+                                            <td class="text-center">1h0min</td>
+                                            <td class="text-center">$500</td>
+                                            <td class="text-center">
+                                                <button data-bs-toggle="modal" data-bs-target="#verdict-reasonModal" class="btn btn-secondary" type="button"><span class="iconify" data-icon="mdi:eye"></span></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="page-element">
                             <div class="element-title">
-                                <span>Title</span>
+                                <span>Wpisy funkcjonariuszy</span>
                             </div>
-                            <div class="element-content">
-                                asd
+                            <div id="officers-entries" class="element-content">
+                                <div class="message-textarea">
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Treść wiadomości..."></textarea>
+                                    <button class="btn btn-success" type="button">Wyślij</button>
+                                </div>
+                                <table class="table table-sm table-hover table-borderless align-middle">
+                                    <tbody id="officers-entries-table" class="table-dark">
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex flex-column">
+                                                    <span>Imię Nazwisko</span>
+                                                    <span>01.12.2023, 03:55</span>
+                                                </div>
+                                            </td>
+                                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, recusandae natus, nihil nostrum mollitia ab officiis aperiam qui odit optio provident aliquid neque dolores. Voluptatibus cum veniam porro enim ea?</td>
+                                            <td class="text-center">
+                                                <button class="btn btn-danger" type="button">Usuń</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex flex-column">
+                                                    <span>Imię Nazwisko</span>
+                                                    <span>01.12.2023, 03:55</span>
+                                                </div>
+                                            </td>
+                                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, recusandae natus, nihil nostrum mollitia ab officiis aperiam qui odit optio provident aliquid neque dolores. Voluptatibus cum veniam porro enim ea?</td>
+                                            <td class="text-center">
+                                                <button class="btn btn-danger" type="button">Usuń</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex flex-column">
+                                                    <span>Imię Nazwisko</span>
+                                                    <span>01.12.2023, 03:55</span>
+                                                </div>
+                                            </td>
+                                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, recusandae natus, nihil nostrum mollitia ab officiis aperiam qui odit optio provident aliquid neque dolores. Voluptatibus cum veniam porro enim ea?</td>
+                                            <td class="text-center">
+                                                <button class="btn btn-danger" type="button">Usuń</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="row row-cols-1 gap-4">
+                    <div class="col">
+                        <div class="page-element">
+                            <div class="element-title">
+                                <span>Tablica ogłoszeń</span>
+                                <button data-bs-toggle="modal" data-bs-target="#add-announcementModal" class="btn btn-success ms-auto" type="button">
+                                    Dodaj
+                                </button>
+                            </div>
+                            <div id="bulletin-boards" class="element-content">
+                                <div class="dropdown dropstart">
+                                    <div class="announcement" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <div class="announcement-content">
+                                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam numquam voluptas laborum voluptatem libero iusto iste vel atque, quos, corporis exercitationem ad culpa asperiores suscipit quo accusantium repellat, cum ex?</span>
+                                        </div>
+                                        <div class="announcement-info">
+                                            <span class="nickname">Imię Nazwisko</span>
+                                            <span class="timestamp">Dziś, 02:40</span>
+                                        </div>
+                                    </div>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item">Usuń ogłoszenie</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown dropstart">
+                                    <div class="announcement" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <div class="announcement-content">
+                                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam numquam voluptas laborum voluptatem libero iusto iste vel atque, quos, corporis exercitationem ad culpa asperiores suscipit quo accusantium repellat, cum ex?</span>
+                                        </div>
+                                        <div class="announcement-info">
+                                            <span class="nickname">Imię Nazwisko</span>
+                                            <span class="timestamp">01.12.2023, 03:45</span>
+                                        </div>
+                                    </div>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item">Usuń ogłoszenie</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -266,6 +391,41 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Anuluj</button>
                     <button type="button" class="btn btn-success">Zapisz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="add-announcementModal" tabindex="-1" aria-labelledby="add-announcementModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="add-announcementModalLabel">Dodawanie ogłoszenia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Treść ogłoszenia..."></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Anuluj</button>
+                    <button type="button" class="btn btn-success">Dodaj</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="verdict-reasonModal" tabindex="-1" aria-labelledby="verdict-reasonModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="verdict-reasonModalLabel">Powód ustalenia wyroku</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quos quo suscipit, libero nisi, inventore odit accusamus, dolore consequatur ducimus aspernatur voluptate voluptatibus. Suscipit reiciendis, repudiandae autem natus atque error.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Zamknij</button>
                 </div>
             </div>
         </div>

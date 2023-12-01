@@ -11,7 +11,7 @@ let pages = [
     {
         page: 'lspd-cad',
         css: [ 'css/style.css' ],
-        images: [ 'images/background.jpg', 'images/logo.png' ],
+        images: [ 'images/background.jpg', 'images/logo.png', 'images/nopic.jpg' ],
         javascript: [ 'javascript/js.js' ],
         subpages: [
           
