@@ -7,5 +7,222 @@
         <div class="page-title">
             <span>Profil obywatela</span>
         </div>
+        <div class="row mb-4">
+            <div class="col">
+                <div class="page-element">
+                    <!-- <div class="element-title">
+                        <span>Title</span>
+                    </div> -->
+                    <div class="element-content">
+                        <div class="basic-information">
+                            <div class="citizen-photo">
+                                <img data-image="user">
+                            </div>
+                            <div class="d-flex flex-column gap-1">
+                                <div class="d-flex align-items-center">
+                                    <div class="citizen-info">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="title">Imię i nazwisko:</span>
+                                            <span class="value">Imię Nazwisko</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="title">SSN:</span>
+                                            <span class="value">123456789</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="title">Data urodzenia:</span>
+                                            <span class="value">12.12.2012</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="title">Płeć:</span>
+                                            <span class="value">Mężczyzna</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="title">Wzrost:</span>
+                                            <span class="value">185cm</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="title">Waga:</span>
+                                            <span class="value">85kg</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="title">Rasa:</span>
+                                            <span class="value">N/A</span>
+                                        </div>
+                                    </div>
+                                    <div class="citizen-info ms-4">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="title">Pseudonim:</span>
+                                            <span class="value">N/A</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="title">Znaki specjalne:</span>
+                                            <span class="value">N/A</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="title">Adres zamieszkania:</span>
+                                            <span class="value">N/A</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="title">Zatrudnienie:</span>
+                                            <span class="value">N/A</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="title">Numer telefonu:</span>
+                                            <span class="value">N/A</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="title">Przynależność:</span>
+                                            <span class="value">N/A</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="title">Odcisk palca:</span>
+                                            <span class="value">2D63B</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="citizen-tag">
+                                    <span class="badge bg-danger">Poszukiwany</span>
+                                </div>
+                            </div>
+                            <div class="edit-citizen-informations">
+                                <div class="last-edit-info">
+                                    <span class="title">Ostatnia aktualizacja:</span>
+                                    <span class="username">Imię Nazwisko</span>
+                                    <span class="timestamp">02.12.2023 godz 03:14</span>
+                                </div>
+                                <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#edit-infoModal" class="btn btn-secondary" data-tooltip="Edytuj informacje" data-flow="top" type="button"><span class="iconify" data-icon="material-symbols:edit"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-cols-2 mb-4">
+            <div class="col">
+                <div class="page-element">
+                    <div class="element-title">
+                        <span>Mandaty</span>
+                    </div>
+                    <div class="element-content">
+                        <!-- MAX 5 w tabeli i paginacja -->
+                        <table class="table table-sm table-hover table-borderless">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th scope="col">Ukarał</th>
+                                    <th scope="col" class="text-center">Kwota</th>
+                                    <th scope="col" class="text-center">Powód</th>
+                                </tr>
+                            </thead>
+                            <tbody id="recent-verdicts-table" class="table-dark">
+                                <tr>
+                                    <td>[12312] Imię Nazwisko</td>
+                                    <td class="text-center">$200</td>
+                                    <td class="text-center">
+                                        <button data-bs-toggle="modal" data-bs-target="#verdict-reasonModal" class="btn btn-secondary" type="button"><span class="iconify" data-icon="mdi:eye"></span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>[12312] Imię Nazwisko</td>
+                                    <td class="text-center">$200</td>
+                                    <td class="text-center">
+                                        <button data-bs-toggle="modal" data-bs-target="#verdict-reasonModal" class="btn btn-secondary" type="button"><span class="iconify" data-icon="mdi:eye"></span></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="page-element">
+                    <div class="element-title">
+                        <span>Wyroki</span>
+                    </div>
+                    <div class="element-content">
+                        <!-- MAX 5 w tabeli i paginacja -->
+                        asd
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="edit-infoModal" tabindex="-1" aria-labelledby="edit-infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="edit-infoModalLabel">Edycja informacji o obywatelu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row row-cols-2">
+                            <div class="col">
+                                <div class="mb-2">
+                                    <label for="breedInp" class="form-label">Rasa</label>
+                                    <input type="text" class="form-control" id="breedInp" aria-describedby="breedInp">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="mb-2">
+                                    <label for="nicknameInp" class="form-label">Pseudonim</label>
+                                    <input type="text" class="form-control" id="nicknameInp" aria-describedby="nicknameInp">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="mb-2">
+                                    <label for="special-signsInp" class="form-label">Znaki specjalne</label>
+                                    <input type="text" class="form-control" id="special-signsInp" aria-describedby="special-signsInp">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="mb-2">
+                                    <label for="adressInp" class="form-label">Adres zamieszkania</label>
+                                    <input type="text" class="form-control" id="adressInp" aria-describedby="adressInp">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="mb-2">
+                                    <label for="employmentInp" class="form-label">Zatrudnienie</label>
+                                    <input type="text" class="form-control" id="employmentInp" aria-describedby="employmentInp">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="mb-2">
+                                    <label for="phone-numberInp" class="form-label">Numer telefonu</label>
+                                    <input type="text" class="form-control" id="phone-numberInp" aria-describedby="phone-numberInp">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="mb-2">
+                                    <label for="membershipInp" class="form-label">Przynależność</label>
+                                    <input type="text" class="form-control" id="membershipInp" aria-describedby="membershipInp">
+                                </div>
+                            </div>
+                            <div class="col mt-auto mb-auto">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="wantedCheck" checked>
+                                    <label class="form-check-label" for="wantedCheck">Poszukiwany?</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="mb-2">
+                        <label for="patrol-statusInp" class="form-label">Status patrolu</label>
+                        <select class="form-select" aria-label="Default select example" id="patrol-statusInp" aria-describedby="patrol-statusInp">
+                            <option selected>Wybierz status</option>
+                            <option value="1">W patrolu</option>
+                            <option value="2">Przerwa</option>
+                        </select>
+                    </div> -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Anuluj</button>
+                    <button type="button" class="btn btn-success">Zapisz</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

@@ -384,7 +384,66 @@ tbody.table-dark {
     cursor: pointer;
 }
 
-
+/* CITIZEN PROFILE ------------------------------------------------- */
+#citizen-profile .basic-information {
+    display: flex;
+    gap: 10px;
+}
+#citizen-profile .basic-information .citizen-photo {
+    width: 150px;
+    height: 150px;
+}
+#citizen-profile .basic-information .citizen-photo img {
+    width: 100%;
+    height: auto;
+}
+#citizen-profile .basic-information .citizen-tag {
+    width: 100%;
+    margin-top: auto;
+}
+#citizen-profile .basic-information .citizen-tag .badge {
+    width: 100%;
+    font-size: 1em;
+}
+#citizen-profile .basic-information .citizen-info {
+    display: flex;
+    flex-direction: column;
+}
+#citizen-profile .basic-information .citizen-info .title {
+    font-weight: 700;
+}
+#citizen-profile .basic-information .edit-citizen-informations {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-left: auto;
+}
+#citizen-profile .basic-information .edit-citizen-informations .last-edit-info {
+    opacity: 0.6;
+}
+#citizen-profile .basic-information .edit-citizen-informations .last-edit-info .title {
+    font-weight: 700;
+}
+#citizen-profile .modal .form-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0;
+}
+#citizen-profile .modal .form-switch .form-check-input {
+    width: 3em;
+    height: 2em;
+}
+#citizen-profile .modal .form-switch .form-check-input:focus {
+    border: none;
+    box-shadow: none;
+}
+#citizen-profile .modal .form-switch .form-check-input:checked {
+    background-color: #dc3545;
+}
+#citizen-profile .modal .form-switch .form-check-label {
+    font-size: 1.2em;
+}
 
 
 /* FOOTER ------------------------------------------------- */
