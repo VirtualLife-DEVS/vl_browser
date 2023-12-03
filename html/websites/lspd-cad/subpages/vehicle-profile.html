@@ -7,5 +7,365 @@
         <div class="page-title">
             <span>Profil pojazdu</span>
         </div>
+        <div class="row mb-4">
+            <div class="col">
+                <div class="page-element">
+                    <!-- <div class="element-title">
+                        <span>Title</span>
+                    </div> -->
+                    <div class="element-content">
+                        <div class="basic-information">
+                            <div class="vehicle-photo">
+                                <img data-image="user">
+                            </div>
+                            <div class="d-flex flex-column gap-1">
+                                <div class="d-flex align-items-center">
+                                    <div class="vehicle-info">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="title">Właściciel pojazdu:</span>
+                                            <span class="value">
+                                                <a class="main-link" data-browser-subpage="citizen-profile" data-browser-subpage-target="#subpages">Imię Nazwisko</a>
+                                            </span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="title">Nazwa pojazdu:</span>
+                                            <span class="value">Sultan RS</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="title">Numer rejestracyjny:</span>
+                                            <span class="value">LS 123321</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="title">Numer VIN:</span>
+                                            <span class="value">123JHDFHAS32413</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="title">Tuning wizualny:</span>
+                                            <span class="value">N/A</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="title">Tuning mechaniczny:</span>
+                                            <span class="value">N/A</span>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="vehicle-info ms-4">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="title">Pseudonim:</span>
+                                            <span class="value">N/A</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="title">Znaki specjalne:</span>
+                                            <span class="value">N/A</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="title">Adres zamieszkania:</span>
+                                            <span class="value">N/A</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="title">Zatrudnienie:</span>
+                                            <span class="value">N/A</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="title">Numer telefonu:</span>
+                                            <span class="value">N/A</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="title">Przynależność:</span>
+                                            <span class="value">N/A</span>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="title">Odcisk palca:</span>
+                                            <span class="value">2D63B</span>
+                                        </div>
+                                    </div> -->
+                                </div>
+                                <div class="vehicle-tag">
+                                    <span class="badge bg-danger">Odholowany</span>
+                                </div>
+                            </div>
+                            <div class="edit-vehicle-informations">
+                                <div class="last-edit-info">
+                                    <span class="title">Ostatnia aktualizacja:</span>
+                                    <span class="username">Imię Nazwisko</span>
+                                    <span class="timestamp">02.12.2023 godz 03:14</span>
+                                </div>
+                                <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#edit-infoModal" class="btn btn-secondary" data-tooltip="Edytuj informacje" data-flow="top" type="button"><span class="iconify" data-icon="material-symbols:edit"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-cols-2 mb-4">
+            <div class="col">
+                <div class="page-element">
+                    <div class="element-title">
+                        <span>Informacje od funkcjonariuszy</span>
+                        <button data-bs-toggle="modal" data-bs-target="#add-noteModal" class="btn btn-success ms-auto" type="button">Dodaj</button>
+                    </div>
+                    <div class="element-content">
+                        <div id="officers-notes">
+                            <div class="note-container ordinary-note">
+                                <div class="note-info">
+                                    <span class="username">[12312] Imię Nazwisko</span>
+                                    <span class="timestamp">02.12.2023 godz 21:25</span>
+                                    <div class="options ms-auto">
+                                        <button data-bs-toggle="modal" data-bs-target="#edit-noteModal" class="btn btn-secondary" type="button"><span class="iconify" data-icon="material-symbols:edit"></span></button>
+                                        <button class="btn btn-danger" type="button"><span class="iconify" data-icon="material-symbols:delete"></span></button>
+                                    </div>
+                                </div>
+                                <div class="note-content">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nesciunt esse, aspernatur excepturi illo molestias laborum dolore cum hic soluta aliquam perferendis atque. Repudiandae ea mollitia expedita, architecto facere corporis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Non a nostrum rem dolore perferendis doloribus? Labore non harum saepe laudantium voluptate blanditiis dicta omnis, assumenda, animi nesciunt accusantium quidem commodi?
+                                </div>
+                            </div>
+                            <div class="note-container important-note">
+                                <div class="note-info">
+                                    <span class="username">[12312] Imię Nazwisko</span>
+                                    <span class="timestamp">02.12.2023 godz 21:25</span>
+                                    <div class="options ms-auto">
+                                        <button data-bs-toggle="modal" data-bs-target="#edit-noteModal" class="btn btn-secondary" type="button"><span class="iconify" data-icon="material-symbols:edit"></span></button>
+                                        <button class="btn btn-danger" type="button"><span class="iconify" data-icon="material-symbols:delete"></span></button>
+                                    </div>
+                                </div>
+                                <div class="note-content">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nesciunt esse, aspernatur excepturi illo molestias laborum dolore cum hic soluta aliquam perferendis atque. Repudiandae ea mollitia expedita, architecto facere corporis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Non a nostrum rem dolore perferendis doloribus? Labore non harum saepe laudantium voluptate blanditiis dicta omnis, assumenda, animi nesciunt accusantium quidem commodi?
+                                </div>
+                            </div>
+                        </div>
+                        <nav class="mt-3" aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="page-element">
+                    <div class="element-title">
+                        <span>Archiwum odholowań pojazdu</span>
+                    </div>
+                    <div class="element-content">
+                        <!-- MAX 8 w tabeli i paginacja -->
+                        <table class="table table-sm table-hover table-borderless">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th scope="col">Data</th>
+                                    <th scope="col">Odholował</th>
+                                    <th scope="col" class="text-center">Na kwotę</th>
+                                    <th scope="col" class="text-center">Powód</th>
+                                </tr>
+                            </thead>
+                            <tbody id="recent-verdicts-table" class="table-dark">
+                                <tr>
+                                    <td>02.12.2023 16:41</td>
+                                    <td>[12312] Imię Nazwisko</td>
+                                    <td class="text-center">$1200</td>
+                                    <td class="text-center">
+                                        <button data-bs-toggle="modal" data-bs-target="#towing-reasonModal" class="btn btn-secondary" type="button"><span class="iconify" data-icon="mdi:eye"></span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>02.12.2023 16:41</td>
+                                    <td>[12312] Imię Nazwisko</td>
+                                    <td class="text-center">$1200</td>
+                                    <td class="text-center">
+                                        <button data-bs-toggle="modal" data-bs-target="#towing-reasonModal" class="btn btn-secondary" type="button"><span class="iconify" data-icon="mdi:eye"></span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>02.12.2023 16:41</td>
+                                    <td>[12312] Imię Nazwisko</td>
+                                    <td class="text-center">$1200</td>
+                                    <td class="text-center">
+                                        <button data-bs-toggle="modal" data-bs-target="#towing-reasonModal" class="btn btn-secondary" type="button"><span class="iconify" data-icon="mdi:eye"></span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>02.12.2023 16:41</td>
+                                    <td>[12312] Imię Nazwisko</td>
+                                    <td class="text-center">$1200</td>
+                                    <td class="text-center">
+                                        <button data-bs-toggle="modal" data-bs-target="#towing-reasonModal" class="btn btn-secondary" type="button"><span class="iconify" data-icon="mdi:eye"></span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>02.12.2023 16:41</td>
+                                    <td>[12312] Imię Nazwisko</td>
+                                    <td class="text-center">$1200</td>
+                                    <td class="text-center">
+                                        <button data-bs-toggle="modal" data-bs-target="#towing-reasonModal" class="btn btn-secondary" type="button"><span class="iconify" data-icon="mdi:eye"></span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>02.12.2023 16:41</td>
+                                    <td>[12312] Imię Nazwisko</td>
+                                    <td class="text-center">$1200</td>
+                                    <td class="text-center">
+                                        <button data-bs-toggle="modal" data-bs-target="#towing-reasonModal" class="btn btn-secondary" type="button"><span class="iconify" data-icon="mdi:eye"></span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>02.12.2023 16:41</td>
+                                    <td>[12312] Imię Nazwisko</td>
+                                    <td class="text-center">$1200</td>
+                                    <td class="text-center">
+                                        <button data-bs-toggle="modal" data-bs-target="#towing-reasonModal" class="btn btn-secondary" type="button"><span class="iconify" data-icon="mdi:eye"></span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>02.12.2023 16:41</td>
+                                    <td>[12312] Imię Nazwisko</td>
+                                    <td class="text-center">$1200</td>
+                                    <td class="text-center">
+                                        <button data-bs-toggle="modal" data-bs-target="#towing-reasonModal" class="btn btn-secondary" type="button"><span class="iconify" data-icon="mdi:eye"></span></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="edit-infoModal" tabindex="-1" aria-labelledby="edit-infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="edit-infoModalLabel">Edycja informacji o pojeździe</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row row-cols-2">
+                            <div class="col">
+                                <div class="mb-2">
+                                    <label for="visual-tuneInp" class="form-label">Tuning wizualny</label>
+                                    <input type="text" class="form-control" id="visual-tuneInp" aria-describedby="visual-tuneInp">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="mb-2">
+                                    <label for="mechanical-tuneInp" class="form-label">Tuning mechaniczny</label>
+                                    <input type="text" class="form-control" id="mechanical-tuneInp" aria-describedby="mechanical-tuneInp">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="mb-2">
+                        <label for="patrol-statusInp" class="form-label">Status patrolu</label>
+                        <select class="form-select" aria-label="Default select example" id="patrol-statusInp" aria-describedby="patrol-statusInp">
+                            <option selected>Wybierz status</option>
+                            <option value="1">W patrolu</option>
+                            <option value="2">Przerwa</option>
+                        </select>
+                    </div> -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Anuluj</button>
+                    <button type="button" class="btn btn-success">Zapisz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="add-noteModal" tabindex="-1" aria-labelledby="add-noteModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="add-noteModalLabel">Dodawanie notatki</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-2">
+                        <label for="note-typeInp" class="form-label">Rodzaj notatki</label>
+                        <select class="form-select" aria-label="Default select example" id="note-typeInp" aria-describedby="note-typeInp">
+                            <option selected>Wybierz rodzaj</option>
+                            <option value="1">Zwykła</option>
+                            <option value="2">Ważna</option>
+                        </select>
+                    </div>
+                    <textarea class="form-control" id="" rows="5"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Dodaj</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Anuluj</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="edit-noteModal" tabindex="-1" aria-labelledby="edit-noteModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="edit-noteModalLabel">Edycja notatki</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-2">
+                        <label for="note-typeInp" class="form-label">Rodzaj notatki</label>
+                        <select class="form-select" aria-label="Default select example" id="note-typeInp" aria-describedby="note-typeInp">
+                            <option selected>Wybierz rodzaj</option>
+                            <option value="1">Zwykła</option>
+                            <option value="2">Ważna</option>
+                        </select>
+                    </div>
+                    <textarea class="form-control" id="" rows="5"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Zapisz</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Anuluj</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="towing-reasonModal" tabindex="-1" aria-labelledby="towing-reasonModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="towing-reasonModalLabel">Powód odholowania pojazdu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quos quo suscipit, libero nisi, inventore odit accusamus, dolore consequatur ducimus aspernatur voluptate voluptatibus. Suscipit reiciendis, repudiandae autem natus atque error.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Zamknij</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

@@ -103,6 +103,258 @@
             <div class="col">
                 <div class="page-element">
                     <div class="element-title">
+                        <span>Posiadane dokumenty</span>
+                    </div>
+                    <div class="element-content">
+                        <table class="table table-sm table-hover table-borderless">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th scope="col">Rodzaj dokumentu</th>
+                                    <th scope="col">Data wydania</th>
+                                    <th scope="col">Ważność dokumentu</th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="documents-table" class="table-dark">
+                                <tr>
+                                    <td>Dowód osobisty</td>
+                                    <td>02.12.2023</td>
+                                    <td></td>
+                                    <td>
+                                        <span class="badge bg-success">Ważny</span>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Prawo jazdy (Kat. A,B, C) (PK: 0/10)</td>
+                                    <td>02.12.2023</td>
+                                    <td></td>
+                                    <td>
+                                        <span class="badge bg-danger">Nieważny</span>
+                                    </td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                <span class="iconify" data-icon="tabler:dots"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                <!--
+                                                    Po osiągnięciu 10 punktów karnych ta sama procedura co niżej.
+                                                -->
+                                                <li><a class="dropdown-item">Dodaj punkty karne</a></li>
+                                                <!--
+                                                    Po zatrzymaniu prawa jazdy, item prawka znika.
+                                                    Gracz otrzymuje blokadę ponownego wyrobienia prawka na 7 dni.
+                                                    Po upływie 7 dni gracz musi na nowo wyrobić prawo jazdy.
+                                                -->
+                                                <li><a class="dropdown-item">Zatrzymaj</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Licencja na broń (CCL)</td>
+                                    <td>02.12.2023</td>
+                                    <td>02.01.2024</td>
+                                    <td>
+                                        <span class="badge bg-success">Ważny</span>
+                                    </td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                <span class="iconify" data-icon="tabler:dots"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                <li><a class="dropdown-item">Odnów licencję</a></li>
+                                                <li><a class="dropdown-item">Nadaj licencję</a></li>
+                                                <li><a class="dropdown-item">Odbierz licencję</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Licencja na broń (PEL)</td>
+                                    <td>02.12.2023</td>
+                                    <td>02.01.2024</td>
+                                    <td>
+                                        <span class="badge bg-danger">Nieważny</span>
+                                    </td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                <span class="iconify" data-icon="tabler:dots"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                <li><a class="dropdown-item">Odnów licencję</a></li>
+                                                <li><a class="dropdown-item">Nadaj licencję</a></li>
+                                                <li><a class="dropdown-item">Odbierz licencję</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="page-element">
+                    <div class="element-title">
+                        <span>Zarejestrowane pojazdy</span>
+                    </div>
+                    <div class="element-content">
+                        <table class="table table-sm table-hover table-borderless">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th scope="col">Pojazd</th>
+                                    <th scope="col">Nr. Rejestracyjne</th>
+                                    <th scope="col">Nr. VIN</th>
+                                    <th scope="col">Status poszukiwań</th>
+                                </tr>
+                            </thead>
+                            <tbody id="vehicles-table" class="table-dark">
+                                <tr>
+                                    <td>Sultan RS</td>
+                                    <td><a data-browser-subpage="vehicle-profile" data-browser-subpage-target="#subpages">LS 123321</a></td>
+                                    <td>123JHDFHAS32413</td>
+                                    <td>Brak</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Neon</td>
+                                    <td><a data-browser-subpage="vehicle-profile" data-browser-subpage-target="#subpages">LS 223124</a></td>
+                                    <td>3881HJAFJLASF181</td>
+                                    <td class="wanted">Poszukiwany</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Adder</td>
+                                    <td><a data-browser-subpage="vehicle-profile" data-browser-subpage-target="#subpages">LS 871243</a></td>
+                                    <td>821JKASFHNAS72134</td>
+                                    <td>Brak</td>
+                                    <td><span class="confiscated">Zarekwirowany</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Adder</td>
+                                    <td><a data-browser-subpage="vehicle-profile" data-browser-subpage-target="#subpages">LS 871243</a></td>
+                                    <td>821JKASFHNAS72134</td>
+                                    <td>Brak</td>
+                                    <td><span class="confiscated">Zarekwirowany</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Adder</td>
+                                    <td><a data-browser-subpage="vehicle-profile" data-browser-subpage-target="#subpages">LS 871243</a></td>
+                                    <td>821JKASFHNAS72134</td>
+                                    <td>Brak</td>
+                                    <td><span class="confiscated">Zarekwirowany</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col">
+                <div class="page-element">
+                    <div class="element-title">
+                        <span>Informacje od funkcjonariuszy</span>
+                        <button data-bs-toggle="modal" data-bs-target="#add-noteModal" class="btn btn-success ms-auto" type="button">Dodaj</button>
+                    </div>
+                    <div class="element-content">
+                        <div id="officers-notes">
+                            <div class="note-container ordinary-note">
+                                <div class="note-info">
+                                    <span class="username">[12312] Imię Nazwisko</span>
+                                    <span class="timestamp">02.12.2023 godz 21:25</span>
+                                    <div class="options ms-auto">
+                                        <button data-bs-toggle="modal" data-bs-target="#edit-noteModal" class="btn btn-secondary" type="button"><span class="iconify" data-icon="material-symbols:edit"></span></button>
+                                        <button class="btn btn-danger" type="button"><span class="iconify" data-icon="material-symbols:delete"></span></button>
+                                    </div>
+                                </div>
+                                <div class="note-content">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nesciunt esse, aspernatur excepturi illo molestias laborum dolore cum hic soluta aliquam perferendis atque. Repudiandae ea mollitia expedita, architecto facere corporis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Non a nostrum rem dolore perferendis doloribus? Labore non harum saepe laudantium voluptate blanditiis dicta omnis, assumenda, animi nesciunt accusantium quidem commodi?
+                                </div>
+                            </div>
+                            <div class="note-container important-note">
+                                <div class="note-info">
+                                    <span class="username">[12312] Imię Nazwisko</span>
+                                    <span class="timestamp">02.12.2023 godz 21:25</span>
+                                    <div class="options ms-auto">
+                                        <button data-bs-toggle="modal" data-bs-target="#edit-noteModal" class="btn btn-secondary" type="button"><span class="iconify" data-icon="material-symbols:edit"></span></button>
+                                        <button class="btn btn-danger" type="button"><span class="iconify" data-icon="material-symbols:delete"></span></button>
+                                    </div>
+                                </div>
+                                <div class="note-content">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nesciunt esse, aspernatur excepturi illo molestias laborum dolore cum hic soluta aliquam perferendis atque. Repudiandae ea mollitia expedita, architecto facere corporis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Non a nostrum rem dolore perferendis doloribus? Labore non harum saepe laudantium voluptate blanditiis dicta omnis, assumenda, animi nesciunt accusantium quidem commodi?
+                                </div>
+                            </div>
+                        </div>
+                        <nav class="mt-3" aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-cols-2 mb-4">
+            <div class="col">
+                <div class="page-element">
+                    <div class="element-title">
                         <span>Mandaty</span>
                     </div>
                     <div class="element-content">
@@ -110,28 +362,72 @@
                         <table class="table table-sm table-hover table-borderless">
                             <thead class="table-dark">
                                 <tr>
-                                    <th scope="col">Ukarał</th>
-                                    <th scope="col" class="text-center">Kwota</th>
+                                    <th scope="col">Data</th>
+                                    <th scope="col">Nałożył mandat</th>
+                                    <th scope="col" class="text-center">Na kwotę</th>
                                     <th scope="col" class="text-center">Powód</th>
                                 </tr>
                             </thead>
                             <tbody id="recent-verdicts-table" class="table-dark">
                                 <tr>
+                                    <td>02.12.2023 16:41</td>
                                     <td>[12312] Imię Nazwisko</td>
                                     <td class="text-center">$200</td>
                                     <td class="text-center">
-                                        <button data-bs-toggle="modal" data-bs-target="#verdict-reasonModal" class="btn btn-secondary" type="button"><span class="iconify" data-icon="mdi:eye"></span></button>
+                                        <button data-bs-toggle="modal" data-bs-target="#mandate-reasonModal" class="btn btn-secondary" type="button"><span class="iconify" data-icon="mdi:eye"></span></button>
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td>02.12.2023 16:41</td>
                                     <td>[12312] Imię Nazwisko</td>
                                     <td class="text-center">$200</td>
                                     <td class="text-center">
-                                        <button data-bs-toggle="modal" data-bs-target="#verdict-reasonModal" class="btn btn-secondary" type="button"><span class="iconify" data-icon="mdi:eye"></span></button>
+                                        <button data-bs-toggle="modal" data-bs-target="#mandate-reasonModal" class="btn btn-secondary" type="button"><span class="iconify" data-icon="mdi:eye"></span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>02.12.2023 16:41</td>
+                                    <td>[12312] Imię Nazwisko</td>
+                                    <td class="text-center">$200</td>
+                                    <td class="text-center">
+                                        <button data-bs-toggle="modal" data-bs-target="#mandate-reasonModal" class="btn btn-secondary" type="button"><span class="iconify" data-icon="mdi:eye"></span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>02.12.2023 16:41</td>
+                                    <td>[12312] Imię Nazwisko</td>
+                                    <td class="text-center">$200</td>
+                                    <td class="text-center">
+                                        <button data-bs-toggle="modal" data-bs-target="#mandate-reasonModal" class="btn btn-secondary" type="button"><span class="iconify" data-icon="mdi:eye"></span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>02.12.2023 16:41</td>
+                                    <td>[12312] Imię Nazwisko</td>
+                                    <td class="text-center">$200</td>
+                                    <td class="text-center">
+                                        <button data-bs-toggle="modal" data-bs-target="#mandate-reasonModal" class="btn btn-secondary" type="button"><span class="iconify" data-icon="mdi:eye"></span></button>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -142,7 +438,81 @@
                     </div>
                     <div class="element-content">
                         <!-- MAX 5 w tabeli i paginacja -->
-                        asd
+                        <table class="table table-sm table-hover table-borderless">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th scope="col">Data</th>
+                                    <th scope="col">Wydał wyrok</th>
+                                    <th scope="col" class="text-center">Czas</th>
+                                    <th scope="col" class="text-center">Na kwotę</th>
+                                    <th scope="col" class="text-center">Powód</th>
+                                </tr>
+                            </thead>
+                            <tbody id="recent-verdicts-table" class="table-dark">
+                                <tr>
+                                    <td>02.12.2023 16:41</td>
+                                    <td>[12312] Imię Nazwisko</td>
+                                    <td class="text-center">1h10min</td>
+                                    <td class="text-center">$200</td>
+                                    <td class="text-center">
+                                        <button data-bs-toggle="modal" data-bs-target="#mandate-reasonModal" class="btn btn-secondary" type="button"><span class="iconify" data-icon="mdi:eye"></span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>02.12.2023 16:41</td>
+                                    <td>[12312] Imię Nazwisko</td>
+                                    <td class="text-center">1h10min</td>
+                                    <td class="text-center">$200</td>
+                                    <td class="text-center">
+                                        <button data-bs-toggle="modal" data-bs-target="#mandate-reasonModal" class="btn btn-secondary" type="button"><span class="iconify" data-icon="mdi:eye"></span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>02.12.2023 16:41</td>
+                                    <td>[12312] Imię Nazwisko</td>
+                                    <td class="text-center">1h10min</td>
+                                    <td class="text-center">$200</td>
+                                    <td class="text-center">
+                                        <button data-bs-toggle="modal" data-bs-target="#mandate-reasonModal" class="btn btn-secondary" type="button"><span class="iconify" data-icon="mdi:eye"></span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>02.12.2023 16:41</td>
+                                    <td>[12312] Imię Nazwisko</td>
+                                    <td class="text-center">1h10min</td>
+                                    <td class="text-center">$200</td>
+                                    <td class="text-center">
+                                        <button data-bs-toggle="modal" data-bs-target="#mandate-reasonModal" class="btn btn-secondary" type="button"><span class="iconify" data-icon="mdi:eye"></span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>02.12.2023 16:41</td>
+                                    <td>[12312] Imię Nazwisko</td>
+                                    <td class="text-center">1h10min</td>
+                                    <td class="text-center">$200</td>
+                                    <td class="text-center">
+                                        <button data-bs-toggle="modal" data-bs-target="#mandate-reasonModal" class="btn btn-secondary" type="button"><span class="iconify" data-icon="mdi:eye"></span></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -221,6 +591,75 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Anuluj</button>
                     <button type="button" class="btn btn-success">Zapisz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="mandate-reasonModal" tabindex="-1" aria-labelledby="mandate-reasonModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mandate-reasonModalLabel">Powód nałożenia mandatu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quos quo suscipit, libero nisi, inventore odit accusamus, dolore consequatur ducimus aspernatur voluptate voluptatibus. Suscipit reiciendis, repudiandae autem natus atque error.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Zamknij</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="add-noteModal" tabindex="-1" aria-labelledby="add-noteModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="add-noteModalLabel">Dodawanie notatki</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-2">
+                        <label for="note-typeInp" class="form-label">Rodzaj notatki</label>
+                        <select class="form-select" aria-label="Default select example" id="note-typeInp" aria-describedby="note-typeInp">
+                            <option selected>Wybierz rodzaj</option>
+                            <option value="1">Zwykła</option>
+                            <option value="2">Ważna</option>
+                        </select>
+                    </div>
+                    <textarea class="form-control" id="" rows="5"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Dodaj</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Anuluj</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="edit-noteModal" tabindex="-1" aria-labelledby="edit-noteModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="edit-noteModalLabel">Edycja notatki</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-2">
+                        <label for="note-typeInp" class="form-label">Rodzaj notatki</label>
+                        <select class="form-select" aria-label="Default select example" id="note-typeInp" aria-describedby="note-typeInp">
+                            <option selected>Wybierz rodzaj</option>
+                            <option value="1">Zwykła</option>
+                            <option value="2">Ważna</option>
+                        </select>
+                    </div>
+                    <textarea class="form-control" id="" rows="5"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Zapisz</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Anuluj</button>
                 </div>
             </div>
         </div>

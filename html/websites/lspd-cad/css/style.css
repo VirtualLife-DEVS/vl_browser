@@ -12,9 +12,17 @@
 }
 
 /* DEFAULT ------------------------------------------- */
+#subpages {
+    margin-bottom: 20px;
+}
 .table .btn {
-    padding: 0 .75rem;
-    font-size: .8em;
+    background-color: #6c757d;
+    padding: 0 3px;
+    font-size: .9em;
+    color: #fff;
+}
+.table .btn:hover {
+    background-color: rgb(92, 99, 106);
 }
 .table tbody tr .wanted {
     color: #e73f15;
@@ -26,11 +34,11 @@
     font-size: .8em;
 }
 .table tbody tr td a {
-    text-decoration: underline;
+    text-decoration: underline !important;
     transition: .3s ease-in-out;
 }
 .table tbody tr td a:hover {
-    color: #e73f15;
+    color: #e73f15 !important;
     cursor: pointer;
 }
 thead.table-dark {
@@ -103,6 +111,7 @@ tbody.table-dark {
 }
 .dropdown-item {
     color: #ccc;
+    text-decoration: none !important;
 }
 .dropdown-item:hover {
     background-color: #0c2236;
@@ -120,6 +129,7 @@ tbody.table-dark {
 }
 .page-element {
     background-color: #071c2e;
+    height: 100%;
 }
 .page-element .element-title {
     display: flex;
@@ -145,6 +155,21 @@ tbody.table-dark {
 }
 .alert .iconify {
     font-size: 1.2em;
+}
+
+.pagination {
+    justify-content: center;
+}
+.pagination .page-item .page-link {
+    background-color: #0f2940;
+    border: none;
+    color: #ccc;
+}
+.pagination .page-item .page-link:focus {
+    border: none;
+    box-shadow: none;
+    font-weight: 700;
+    color: #fff;
 }
 
 [data-tooltip]:after {
@@ -424,6 +449,40 @@ tbody.table-dark {
 #citizen-profile .basic-information .edit-citizen-informations .last-edit-info .title {
     font-weight: 700;
 }
+#citizen-profile #officers-notes {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+#citizen-profile #officers-notes .note-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+}
+#citizen-profile #officers-notes .note-container.ordinary-note {
+    background-color: rgba(255,255,255,0.1);
+}
+#citizen-profile #officers-notes .note-container.important-note {
+    background-color: rgba(230,62,20,0.5);
+}
+#citizen-profile #officers-notes .note-container .note-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#citizen-profile #officers-notes .note-container .note-info .username {
+    font-weight: 700;
+    font-size: 1.1em;
+}
+#citizen-profile #officers-notes .note-container .note-info .timestamp {
+    font-size: .9em;
+    opacity: .6;
+}
+#citizen-profile #officers-notes .note-container .note-info .options .btn {
+    padding: 0 3px;
+}
+
 #citizen-profile .modal .form-check {
     display: flex;
     align-items: center;
@@ -445,7 +504,112 @@ tbody.table-dark {
     font-size: 1.2em;
 }
 
+/* VEHICLE PROFILE ------------------------------------------------- */
+#vehicle-profile .basic-information {
+    display: flex;
+    gap: 10px;
+}
+#vehicle-profile .basic-information .vehicle-photo {
+    width: 150px;
+    height: 150px;
+}
+#vehicle-profile .basic-information .vehicle-photo img {
+    width: 100%;
+    height: auto;
+}
+#vehicle-profile .basic-information .vehicle-tag {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: auto;
+}
+#vehicle-profile .basic-information .vehicle-tag .badge {
+    width: 100%;
+    font-size: 1em;
+}
+#vehicle-profile .basic-information .vehicle-info {
+    display: flex;
+    flex-direction: column;
+}
+#vehicle-profile .basic-information .vehicle-info .title {
+    font-weight: 700;
+}
+#vehicle-profile .basic-information .edit-vehicle-informations {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-left: auto;
+}
+#vehicle-profile .basic-information .edit-vehicle-informations .last-edit-info {
+    opacity: 0.6;
+}
+#vehicle-profile .basic-information .edit-vehicle-informations .last-edit-info .title {
+    font-weight: 700;
+}
+#vehicle-profile #officers-notes {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+#vehicle-profile #officers-notes .note-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+}
+#vehicle-profile #officers-notes .note-container.ordinary-note {
+    background-color: rgba(255,255,255,0.1);
+}
+#vehicle-profile #officers-notes .note-container.important-note {
+    background-color: rgba(230,62,20,0.5);
+}
+#vehicle-profile #officers-notes .note-container .note-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#vehicle-profile #officers-notes .note-container .note-info .username {
+    font-weight: 700;
+    font-size: 1.1em;
+}
+#vehicle-profile #officers-notes .note-container .note-info .timestamp {
+    font-size: .9em;
+    opacity: .6;
+}
+#vehicle-profile #officers-notes .note-container .note-info .options .btn {
+    padding: 0 3px;
+}
 
+#vehicle-profile .modal .form-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0;
+}
+#vehicle-profile .modal .form-switch .form-check-input {
+    width: 3em;
+    height: 2em;
+}
+#vehicle-profile .modal .form-switch .form-check-input:focus {
+    border: none;
+    box-shadow: none;
+}
+#vehicle-profile .modal .form-switch .form-check-input:checked {
+    background-color: #dc3545;
+}
+#vehicle-profile .modal .form-switch .form-check-label {
+    font-size: 1.2em;
+}
+
+#vehicle-profile a.main-link {
+    text-decoration: underline !important;
+    transition: .3s ease-in-out;
+    color: #ccc;
+}
+#vehicle-profile a.main-link:hover {
+    color: #e73f15 !important;
+    cursor: pointer;
+}
 /* FOOTER ------------------------------------------------- */
 .footer {
     background-color: #071c2e;
