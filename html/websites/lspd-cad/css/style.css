@@ -12,7 +12,7 @@
 }
 
 /* DEFAULT ------------------------------------------- */
-#subpages {
+#subpages, #m-subpages {
     margin-bottom: 20px;
 }
 .table .btn {
@@ -104,6 +104,14 @@ tbody.table-dark {
     box-shadow: none;
     color: #fff;
 }
+.form-check-input:focus {
+    box-shadow: none;
+    border: none;
+}
+.form-check-input:checked {
+    background-color: #05ab3e;
+    border: none;
+}
 
 .dropdown-menu {
     background-color: #0f2940;
@@ -170,6 +178,34 @@ tbody.table-dark {
     box-shadow: none;
     font-weight: 700;
     color: #fff;
+}
+
+.offcanvas {
+    background-color: #0f2940;
+}
+.offcanvas .btn-close {
+    background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ccc'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+}
+
+.accordion-item {
+    background-color: #0f2940;
+}
+.accordion-button {
+    background-color: #071c2e;
+    color: #fff;
+}
+.accordion-button:focus {
+    box-shadow: none;
+}
+.accordion-button:not(.collapsed) {
+    background-color: #0f2940;
+    color: #fff;
+}
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ccc'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ccc'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 
 [data-tooltip]:after {
@@ -247,6 +283,12 @@ tbody.table-dark {
 #lspd-cad .topbar .nav-link.active {
     background-color: #e73f15;
 }
+#lspd-cad .topbar .nav-link.officer-profile-link {
+    background-color: #e73f15;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 #lspd-cad .logo {
     display: flex;
     align-items: center;
@@ -260,6 +302,28 @@ tbody.table-dark {
     font-weight: 600;
     font-size: 2.4em;
     color: #fff;
+}
+#lspd-cad #offcanvasOfficer-profile .officer-photo img {
+    width: 150px;
+    height: auto;
+    border-radius: 100%;
+}
+#lspd-cad #offcanvasOfficer-profile .officer-informations {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    padding: 0 20px;
+}
+#lspd-cad #offcanvasOfficer-profile .officer-info-item {
+    background-color: #071c2e;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+#lspd-cad #offcanvasOfficer-profile .officer-info-item .title {
+    font-weight: 600;
 }
 
 /* DASHBOARD -------------------------------------------------- */
@@ -610,6 +674,11 @@ tbody.table-dark {
     color: #e73f15 !important;
     cursor: pointer;
 }
+
+/* MANAGMENT ---------------------------------------------- */
+
+
+
 /* FOOTER ------------------------------------------------- */
 .footer {
     background-color: #071c2e;

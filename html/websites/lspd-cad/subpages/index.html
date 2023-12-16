@@ -45,6 +45,14 @@
                     <li class="nav-item">
                         <a data-browser-subpage="managment" data-browser-subpage-target="#subpages" class="nav-link">Panel zarządzania</a>
                     </li>
+                    <div class="vr me-2 ms-2"></div>
+                    <li class="nav-item">
+                        <a class="nav-link officer-profile-link" data-bs-toggle="offcanvas" href="#offcanvasOfficer-profile" role="button" aria-controls="offcanvasOfficer-profile">
+                            <span class="iconify" data-icon="fa:user"></span>
+                            <span class="ms-2 officer-name">Imię Nazwisko</span>
+                            <span class="iconify icon" data-icon="raphael:arrowright"></span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -55,8 +63,67 @@
     $('#subpages').loadSubPage('dashboard'); //dashboard
 </script>
 <div id="subpages"></div>
+
 <div class="footer mt-auto">
     <div class="container">
         <span>Copyright &copy; 2024 PIXEL-DESIGN - All rights reserved</span>
+    </div>
+</div>
+
+
+<!-- OFFCANVAS -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasOfficer-profile" aria-labelledby="offcanvasOfficer-profileLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasOfficer-profileLabel">Profil funkcjonariusza</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="d-flex flex-column align-items-center">
+            <div class="officer-photo mb-5">
+                <img data-image="user">
+            </div>
+            <div class="officer-informations">
+                <div class="officer-info-item">
+                    <span class="title">Imię i Nazwisko:</span>
+                    <span class="value">Imię Nazwisko</span>
+                </div>
+                <div class="officer-info-item">
+                    <span class="title">Stopień:</span>
+                    <span class="value">Officer</span>
+                </div>
+                <div class="officer-info-item">
+                    <span class="title">Numer odznaki:</span>
+                    <span class="value">12312</span>
+                </div>
+                <div class="officer-info-item">
+                    <span class="title">Przydział:</span>
+                    <span class="value">032</span>
+                </div>
+                <div class="officer-info-item mt-3">
+                    <span class="title">Dywizja:</span>
+                    <span class="value">Central Division</span>
+                </div>
+                <div class="officer-info-item">
+                    <span class="title">Poddywizja:</span>
+                    <span class="value">Traffic Division, Air Support Division</span>
+                </div>
+                <div class="officer-info-item mt-3">
+                    <span class="title">Wypisanych mandatów:</span>
+                    <span class="value">115</span>
+                </div>
+                <div class="officer-info-item">
+                    <span class="title">Wydanych wyroków:</span>
+                    <span class="value">98</span>
+                </div>
+                <div class="officer-info-item">
+                    <span class="title">Czas na służbie (dzisiaj):</span>
+                    <span class="value">1h20min</span>
+                </div>
+                <div class="officer-info-item">
+                    <span class="title">Czas na służbie (w sumie):</span>
+                    <span class="value">33h20min</span>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

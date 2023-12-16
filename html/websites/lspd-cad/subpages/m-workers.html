@@ -1,0 +1,192 @@
+<script>
+    setUrl('managment/workers');
+    $('#m-page-title').html('Pracownicy i uprawnienia');
+</script>
+
+<div id="m-workers">
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <div class="page-element">
+                    <div class="element-title">
+                        <span>Lista pracowników</span>
+                        <button class="btn btn-success ms-auto" data-bs-toggle="modal" data-bs-target="#add-workerModal" type="button">Zatrudnij pracownika</button>
+                    </div>
+                    <div class="element-content">
+                        <div class="mb-3">
+                            <input class="form-control" type="search" placeholder="Wyszukaj pracownika" aria-label="Search">
+                        </div>
+                        <table class="table table-sm table-hover table-borderless">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th scope="col">Imię i nazwisko</th>
+                                    <th scope="col">Stopień</th>
+                                    <th scope="col">Numer odznaki</th>
+                                    <th scope="col">Data zatrudnienia</th>
+                                    <th scope="col" class="text-center">Akcja</th>
+                                </tr>
+                            </thead>
+                            <tbody id="vehicles-table" class="table-dark">
+                                <tr>
+                                    <td>Imię Nazwisko</td>
+                                    <td>Officer II</td>
+                                    <td>12312</td>
+                                    <td>16.12.2023</td>
+                                    <td class="text-center">
+                                        <button data-browser-subpage="m-worker-profile" data-browser-subpage-target="#m-subpages" class="btn btn-secondary" type="button">Profil</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Imię Nazwisko</td>
+                                    <td>Officer II</td>
+                                    <td>12312</td>
+                                    <td>16.12.2023</td>
+                                    <td class="text-center">
+                                        <button data-browser-subpage="m-worker-profile" data-browser-subpage-target="#m-subpages" class="btn btn-secondary" type="button">Profil</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="page-element">
+                    <div class="element-title">
+                        <span>Uprawnienia</span>
+                    </div>
+                    <div class="element-content">
+                        <div id="accordionPerms" class="accordion accordion-flush">
+                            <div class="accordion-item">
+                                <!-- 1 - ID rangi z panelu grupy -->
+                                <h2 id="headingRank1" class="accordion-header">
+                                    <button data-bs-target="#collapseRank1" aria-controls="collapseRank1" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false">
+                                        Nazwa rangi (pobierane z panelu grupy)
+                                    </button>
+                                </h2>
+                                <div id="collapseRank1" aria-labelledby="headingRank1" data-bs-parent="#accordionPerms" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitch1">
+                                            <label class="form-check-label" for="flexSwitch1">Dostęp do Panelu zarządzania</label>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitch2">
+                                            <label class="form-check-label" for="flexSwitch2">Dostęp do logów</label>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitch3">
+                                            <label class="form-check-label" for="flexSwitch3">Zatrudnianie pracowników</label>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitch4">
+                                            <label class="form-check-label" for="flexSwitch4">Tworzenie patrolu</label>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitch5">
+                                            <label class="form-check-label" for="flexSwitch5">Dodawanie ogłoszeń</label>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitch6">
+                                            <label class="form-check-label" for="flexSwitch6">Edycja informacji o obywatelu</label>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitch7">
+                                            <label class="form-check-label" for="flexSwitch7">Przyznawanie/odbieranie/odnawianie licencji</label>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitch8">
+                                            <label class="form-check-label" for="flexSwitch8">Zatrzymywanie prawa jazdy</label>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitch9">
+                                            <label class="form-check-label" for="flexSwitch9">Przyznawanie punktów karnych</label>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitch10">
+                                            <label class="form-check-label" for="flexSwitch10">Edycja informacji o pojeździe</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 id="headingRank2" class="accordion-header">
+                                    <button data-bs-target="#collapseRank2" aria-controls="collapseRank2" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false">
+                                        Nazwa rangi (pobierane z panelu grupy)
+                                    </button>
+                                </h2>
+                                <div id="collapseRank2" aria-labelledby="headingRank2" data-bs-parent="#accordionPerms" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitch1">
+                                            <label class="form-check-label" for="flexSwitch1">Dostęp do Panelu zarządzania</label>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitch2">
+                                            <label class="form-check-label" for="flexSwitch2">Dostęp do logów</label>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitch3">
+                                            <label class="form-check-label" for="flexSwitch3">Zatrudnianie pracowników</label>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitch4">
+                                            <label class="form-check-label" for="flexSwitch4">Tworzenie patrolu</label>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitch5">
+                                            <label class="form-check-label" for="flexSwitch5">Dodawanie ogłoszeń</label>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitch6">
+                                            <label class="form-check-label" for="flexSwitch6">Edycja informacji o obywatelu</label>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitch7">
+                                            <label class="form-check-label" for="flexSwitch7">Przyznawanie/odbieranie/odnawianie licencji</label>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitch8">
+                                            <label class="form-check-label" for="flexSwitch8">Zatrzymywanie prawa jazdy</label>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitch9">
+                                            <label class="form-check-label" for="flexSwitch9">Przyznawanie punktów karnych</label>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitch10">
+                                            <label class="form-check-label" for="flexSwitch10">Edycja informacji o pojeździe</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="add-workerModal" tabindex="-1" aria-labelledby="add-workerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="add-workerModalLabel">Zatrudnij pracownika</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="add-worker-idInp" class="form-label">ID Gracza</label>
+                        <input type="number" class="form-control" id="add-worker-idInp" aria-describedby="add-worker-idInp">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Anuluj</button>
+                    <button type="button" class="btn btn-success">Zatrudnij</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

@@ -5,36 +5,17 @@
 <div id="managment">
     <div class="container">
         <div class="page-title">
-            <span>Dashboard</span>
+            <span id="m-page-title"></span>
             <div class="managment-nav ms-auto">
                 <nav class="navbar navbar-expand-lg navbar-dark">
                     <div class="container">
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav gap-2 ms-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a data-browser-subpage="dashboard" data-browser-subpage-target="#subpages" class="nav-link active" aria-current="page">Dashboard</a>
+                                    <a data-browser-subpage="m-workers" data-browser-subpage-target="#m-subpages" class="nav-link active" aria-current="page">Pracownicy i uprawnienia</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a data-browser-subpage="citizens" data-browser-subpage-target="#subpages" class="nav-link">Obywatele</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a data-browser-subpage="vehicles" data-browser-subpage-target="#subpages" class="nav-link" href="#">Pojazdy</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="raportsDropdown" role="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        Raporty
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="raportsDropdown">
-                                        <li><a class="dropdown-item">Traffic Division</a></li>
-                                        <li><a class="dropdown-item">South Division</a></li>
-                                        <li><a class="dropdown-item">Central Division</a></li>
-                                        <li><a class="dropdown-item">Detective Bureau</a></li>
-                                        <li><a class="dropdown-item">Metropolitan Division</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a data-browser-subpage="managment" data-browser-subpage-target="#subpages" class="nav-link" href="#">Panel zarządzania</a>
+                                    <a data-browser-subpage="m-logs" data-browser-subpage-target="#m-subpages" class="nav-link">Logi</a>
                                 </li>
                             </ul>
                         </div>
@@ -43,4 +24,9 @@
             </div>
         </div>
     </div>
+
+    <script>
+        $('#m-subpages').loadSubPage('m-workers'); //m-workers
+    </script>
+    <div id="m-subpages"></div>
 </div>
