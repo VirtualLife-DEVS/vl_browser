@@ -1,7 +1,7 @@
 $(() => {
 
-    $('body').on('click', '#lspd-cad .topbar .nav-link', function(e) {
-        $('#lspd-cad .topbar .nav-link').removeClass('active');
+    $('body').on('click', '#lspd-cad .topbar .nav-link.top-active', function(e) {
+        $('#lspd-cad .topbar .nav-link.top-active').removeClass('active');
         $(e.currentTarget).addClass('active');
     });
 
